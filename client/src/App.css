@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Noto Sans JP";   /*Can be any text*/
+    src: local("Noto Sans JP"),
+      url("./fonts/NotoSansJP-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Infinity Beyond";   /*Can be any text*/
+  src: local("Infinity Beyond"),
+    url("./fonts/InfiniteBeyondItalic-rgPlO.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";   /*Can be any text*/
+  src: local("Poppins"),
+    url("./fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Speedy";   /*Can be any text*/
+  src: local("Speedy"),
+    url("./fonts/SpeedyRegular-7BLoE.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Moonstrike";   /*Can be any text*/
+  src: local("Moonstrike"),
+    url("./fonts/Moonstrike-nRqzP.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "NeonStrike";   /*Can be any text*/
+  src: local("NeonStrike"),
+    url("./fonts/NeonFuture20Demo-L3jp3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SDRobot";   /*Can be any text*/
+  src: local("SDRobot"),
+    url("./fonts/Sdroboticsdemo-X3led.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kosmic";   /*Can be any text*/
+  src: local("Kosmic"),
+    url("./fonts/KosmicsitalicpersonaluseIta-Rp8DE.ttf") format("truetype");
+}

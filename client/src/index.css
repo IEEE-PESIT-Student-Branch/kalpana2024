@@ -1,0 +1,582 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.pages {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(at top left, #5b0718, #1e0122,#010131);
+  overflow: hidden;
+}
+
+.signuncontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.signupheader {
+  padding: 0px;
+  margin: 0px;
+  color: whitesmoke;
+  font-family: SDRobot;
+  font-size: 4rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+.signuppanel {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem;
+  border-radius: 20px;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 10rem;
+}
+
+.signupleft {
+  width: 50%;
+  height: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 20px 20px; /* Adjusted border-radius for the left half */
+} 
+
+.signupright {
+  width: 50%;
+  position: relative;
+  height: auto;
+  border-radius: 0px 20px 20px 0px; /* Adjusted border-radius for the right half */
+}
+
+.leftPanelText {
+  position: absolute;
+  font-size: 3rem;
+  font-family: Infinity Beyond;
+  bottom: 3rem;
+  width: 25%;
+  color: rgb(235, 210, 128);
+}
+
+.signupinput {
+  position: relative;
+  text-align: left;
+  padding-left:3rem;
+  color: rgb(14, 140, 119);
+  padding-top: 2rem;
+  font-family: Speedy;
+}
+
+.signupinput input {
+  font-family: Poppins;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 8px;
+  border: 2px solid rgb(74, 81, 88);
+  width: 80%;
+  background-color: #fce9d2dc;
+  margin-top: 0.3rem;
+  caret-color: black;
+}
+
+.signupinput input:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+#solutionInput {
+  padding-bottom: 5rem;
+}
+
+#solutionInput textarea {
+  resize: vertical;
+  width: 90%;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 2px solid rgb(74, 81, 88);
+  background-color: #fce9d2dc;
+  margin-top: 0.3rem;
+  caret-color: black;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+#solutionInput textarea:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.nextPrevButton {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-between;
+  margin-left: 37%;
+}
+
+.nextPrevButton div {
+  padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+  font-size: 1.2rem;
+  font-family: Poppins;
+  color: black;
+  border-radius: 6px;
+  border: 2px solid rgb(74, 81, 88);
+  background-color: #fce9d2dc;
+  margin-bottom: 1rem;
+  width: 20%;
+}
+
+.nextPrevButton div:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.nextPrevButton div img {
+  width: 90%;
+}
+
+.inputTagPics1 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.4rem;
+  z-index: 3;
+  position: absolute;
+  right: 1.8rem;
+  top: 4rem;
+}
+
+.inputTagPics2 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 3.8rem;
+  z-index: 3;
+  position: absolute;
+  left: 0.6rem;
+  top: 2.6rem;
+}
+
+.formTwoMemberWrapper {
+  margin-left: 15%;
+  border: 3px solid wheat;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.formTwoMemberContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formTwoMemberBox {
+  
+  border: 2px solid rgb(157, 151, 139);
+  border-radius: 15px;
+  font-family: Poppins;
+  font-size: 1rem;
+  color: rgb(157, 151, 139);
+  width: 200px; /* Adjust as needed */
+  margin: 10px;
+  text-align: center;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.formTwoMemberBox:hover {
+  border: 2px solid white;
+  color: white;
+}
+
+.formTwoNotSelected {
+  border: 3px solid wheat;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-size: 1rem;
+  color: rgb(157, 151, 139);
+  padding: 1rem 0rem 1rem 0rem;
+  text-align: center;
+  margin-left: 15%;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.FormTwoSubmit {
+  border: 3px solid rgb(70, 66, 113);
+  border-radius: 20px;
+  font-family: Poppins;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: rgb(70, 66, 113);
+  padding: 0.7rem 0rem 0.7rem 0rem;
+  text-align: center;
+  margin-left: 15%;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.FormTwoSubmit:hover {
+  background-color: rgb(224, 57, 57);
+  color: wheat;
+}
+
+@media screen and (max-width: 1300px) {}
+
+@media screen and (max-width: 1100px) {
+  .signuncontainer {
+    width: 100%; /* Set the width to occupy the full width of the screen */
+    margin-left: 0; /* Remove any left margin */
+    padding-left: 0; /* Remove any left padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .signupheader {
+    text-align: left; /* Align the header text to the left */
+    width: 80%; /* Adjust width as needed */
+    margin-left: 0rem; /* Add a small margin for spacing */
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .signuppanel {
+    display: flex;
+    flex-direction: column; /* Change the direction to column for stacking */
+    align-items: center; /* Align items to the center */
+    justify-content: center; /* Center content vertically */
+    padding: 0.2rem;
+    border-radius: 20px;
+    width: 85%;
+    height: auto; /* Change height to auto for dynamic height */
+    margin-bottom: 5rem;
+  }
+
+  .signupright {
+    border: 1px solid whitesmoke;
+  }
+  
+  .signupleft, .signupright {
+    width: 100%; /* Reduce width for smaller screens */
+    border-radius: 20px; /* Ensure consistent border-radius */
+    margin: 1rem 0; /* Add margin for spacing */
+  }
+
+  .signupleft {
+    height: 25rem;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px; /* Adjusted border-radius for the left half */
+  }
+
+  .signupinput {
+    padding-left:2rem;
+    font-size: 1.5rem;
+  }
+  
+  .signupinput input {
+    font-size: 1.5rem;
+  }
+
+  .leftPanelText {
+    position: absolute;
+    font-size: 3.9rem;
+    font-family: Infinity Beyond;
+    top: 20rem;
+    width: 85%;
+    color: rgb(246, 205, 71);
+  }
+
+  #solutionInput {
+    padding-bottom: 2rem;
+  }
+
+  #solutionInput textarea {
+    width: 85%;
+    font-size: 1.5rem;
+  }
+
+  .inputTagPics1 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3.7rem;
+    z-index: 3;
+    position: absolute;
+    right: 7.8rem;
+    top: 4.8rem;
+  }
+
+  .inputTagPics2 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 4.8rem;
+    z-index: 3;
+    position: absolute;
+    left: 0rem;
+    top: 2.5rem;
+  }
+
+  .nextPrevButton {
+    display: flex;
+    flex-direction: row;
+    width: 18%;
+    justify-content: space-between;
+    margin-left: 38%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .nextPrevButton div {
+    padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    font-family: Poppins;
+    color: black;
+    border-radius: 6px;
+    border: 2px solid rgb(74, 81, 88);
+    background-color: #fce9d2dc;
+    margin-bottom: 1rem;
+    width: 25%;
+  }
+  
+  .nextPrevButton div:hover {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  
+  .nextPrevButton div img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .inputTagPics1 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3,7rem;
+    z-index: 3;
+    position: absolute;
+    right: 2.8rem;
+    top: 4.5rem;
+  }
+
+  .nextPrevButton {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-between;
+    margin-left: 37%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .nextPrevButton div {
+    padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    font-family: Poppins;
+    color: black;
+    border-radius: 6px;
+    border: 2px solid rgb(74, 81, 88);
+    background-color: #fce9d2dc;
+    margin-bottom: 1rem;
+    width: 20%;
+  }
+  
+  .nextPrevButton div:hover {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  
+  .nextPrevButton div img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .signuncontainer {
+    width: 100%; /* Set the width to occupy the full width of the screen */
+    margin-left: 0; /* Remove any left margin */
+    padding-left: 0; /* Remove any left padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .signupheader {
+    text-align: left; /* Align the header text to the left */
+    width: 90%; /* Adjust width as needed */
+    margin-left: 2.5rem; /* Add a small margin for spacing */
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .signuppanel {
+    display: flex;
+    flex-direction: column; /* Change the direction to column for stacking */
+    align-items: center; /* Align items to the center */
+    justify-content: center; /* Center content vertically */
+    padding: 0.2rem;
+    border-radius: 20px;
+    width: 85%;
+    height: auto; /* Change height to auto for dynamic height */
+    margin-bottom: 5rem;
+  }
+
+  .signupright {
+    border: 1px solid whitesmoke;
+  }
+  
+  .signupleft, .signupright {
+    width: 100%; /* Reduce width for smaller screens */
+    border-radius: 20px; /* Ensure consistent border-radius */
+    margin: 1rem 0; /* Add margin for spacing */
+  }
+
+  .signupleft {
+    height: 15rem;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 15px 15px; /* Adjusted border-radius for the left half */
+  }
+
+  .signupinput {
+    padding-left:2rem;
+  }
+  
+  .signupinput input {
+    font-size: 1rem;
+  }
+
+  .leftPanelText {
+    position: absolute;
+    font-size: 2rem;
+    font-family: Infinity Beyond;
+    top: 20rem;
+    width: 85%;
+    color: rgb(246, 205, 71);
+  }
+
+  #solutionInput {
+    padding-bottom: 2rem;
+  }
+
+  #solutionInput textarea {
+    width: 85%;
+    font-size: 1rem;
+  }
+
+  .inputTagPics1 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2.7rem;
+    z-index: 3;
+    position: absolute;
+    right: 1.8rem;
+    top: 4.3rem;
+  }
+
+  .inputTagPics2 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 4rem;
+    z-index: 3;
+    position: absolute;
+    left: 0.2rem;
+    top: 2.6rem;
+  }
+
+  .nextPrevButton {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+    margin-left: 35%;
+  }
+  
+  .nextPrevButton div {
+    padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    font-family: Poppins;
+    color: black;
+    border-radius: 6px;
+    border: 2px solid rgb(74, 81, 88);
+    background-color: #fce9d2dc;
+    margin-bottom: 1rem;
+    width: 15%;
+  }
+  
+  .nextPrevButton div:hover {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  
+  .nextPrevButton div img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 365px) {}
+
+@media screen and (max-width: 300px) {
+  .nextPrevButton {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: space-between;
+    margin-left: 28%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .nextPrevButton div {
+    padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    font-family: Poppins;
+    color: black;
+    border-radius: 6px;
+    border: 2px solid rgb(74, 81, 88);
+    background-color: #fce9d2dc;
+    margin-bottom: 1rem;
+    width: 20%;
+  }
+  
+  .nextPrevButton div:hover {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  
+  .nextPrevButton div img {
+    width: 80%;
+  }
+
+  .signupheader {
+    font-size: 2rem;
+  }
+
+  #solutionInput textarea {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .signupinput {
+    padding-left:1.5rem;
+  }
+
+  .signuppanel {
+    margin-bottom: 1rem;
+  }
+}

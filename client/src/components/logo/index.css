@@ -1,0 +1,37 @@
+.logowrapper {
+    padding: 0px;
+    margin: 0px;
+}
+
+#logoimage {
+    width: 5.8rem;
+    height: 5.8rem;
+    mix-blend-mode: lighten;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1300px) {}
+
+@media screen and (max-width: 1100px) {
+    #logoimage {
+        width: 4.8rem;
+        height: 4.8rem;
+        mix-blend-mode: lighten;
+        padding: 1.5rem 2.3rem 1rem 2.3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {}
+
+@media screen and (max-width: 450px) {
+    #logoimage {
+        width: 3.8rem;
+        height: 3.8rem;
+        mix-blend-mode: lighten;
+        padding: 1rem 1.3rem 1rem 1.3rem;
+    }
+}
+
+@media screen and (max-width: 365px) {}
+
+@media screen and (max-width: 300px) {}
