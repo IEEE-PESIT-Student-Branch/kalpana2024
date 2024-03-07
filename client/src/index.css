@@ -228,6 +228,89 @@ html, body {
   color: wheat;
 }
 
+/*  */
+
+.questionPageNav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.questionPageNav .questionPageNavWrapper{
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  font-family: Poppins;
+  font-size: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavPoints {
+  position: absolute;
+  right: 13rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4rem;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavPoints img {
+  width: 2rem;
+  margin-left: 0.5rem;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavTeam {
+  position: absolute;
+  right: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+#teamTeam {
+  font-size: 1.2rem;
+}
+
+#teamName {
+  font-size: 1.2rem;
+  overflow: hidden; /* Prevent text overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis;
+  width: 50%;
+  color: grey;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavComp {
+  margin-left: 2rem;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavComp:hover {
+  color: burlywood;
+}
+
+.questionPageEasy,.questionPageMedium,.questionPageHard {
+  color: whitesmoke;
+  font-family: Poppins;
+  font-size: 1rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 4rem;
+}
+
+.questionPageHard {
+  margin-bottom: 6rem;
+}
+
+.easySec1,.easySec2,.mediumSec1,.mediumSec2,.mediumSec3,.hardSec1,.hardSec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 1300px) {}
 
 @media screen and (max-width: 1100px) {
@@ -527,6 +610,55 @@ html, body {
   
   .nextPrevButton div img {
     width: 90%;
+  }
+
+  .questionPageEasy,.questionPageMedium,.questionPageHard {
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+  }
+  
+  .questionPageHard {
+    margin-bottom: 6rem;
+  }
+  
+  .easySec1,.easySec2,.mediumSec1,.mediumSec2,.mediumSec3,.hardSec1,.hardSec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .questionPageNav .questionPageNavWrapper{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    font-family: Poppins;
+    position: fixed;
+    bottom: 1rem;
+    z-index: 5;
+    font-size: 0.4rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );border-radius: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .questionPageNav .questionPageNavWrapper .questionPageNavTeam {
+    display: none;
+  }
+
+  .questionPageNav .questionPageNavWrapper .questionPageNavComp {
+    margin-left: 2rem;
+  }
+  .questionPageNav .questionPageNavWrapper .questionPageNavPoints {
+    font-size: 0.4rem;
   }
 }
 

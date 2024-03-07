@@ -4,8 +4,8 @@
 }
 
 #logoimage {
-    width: 5.8rem;
-    height: 5.8rem;
+    width: 5rem;
+    height: 5em;
     mix-blend-mode: lighten;
     padding: 1rem;
 }
