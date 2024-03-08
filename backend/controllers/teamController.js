@@ -1,4 +1,5 @@
 const { Team,validate } = require("../models/teamModel");
+const { easy_ans, med_ans, hard_ans } = require('../answers');
 
 const registerTeam = async (req,res) => {
     const {error} = validate(req.body);
@@ -48,7 +49,90 @@ const loginTeam = async (req, res) => {
     }
 }
 
+const checkAnswer = async (req,res) => {
+    // team_name:Byte Me type:easy points:80 answer:diamond index:3
+    const team = await Team.findOne({team_name: req.body.team_name});
+    if(!team) {
+        return res.status(403).send({"msg":"Your are not logged in"});
+    }
+    const points = parseInt(req.body.points, 10);
+    const ans = req.body.answer;
+    const type = req.body.type;
+    const index = parseInt(req.body.index, 10);
+    console.log(team);
+    console.log(points,typeof(points));
+    console.log(ans,typeof(ans));
+    console.log(type,typeof(type));
+    console.log(index,typeof(index));
+    if (type=='easy') {
+        console.log("easy");
+        const _attempts = team.easyAttempt[index];
+        const attempts = parseInt(_attempts,10);
+        console.log(attempts,typeof(attempts));
+        if (attempts < 3) {
+            let msg = "wrong answer";
+            console.log()
+            const actual_ans = easy_ans[index];
+            if(actual_ans == ans){
+                team.easyques[index] = points.toString();
+                msg = "correct answer";
+            }
+            const new_attempt = attempts+1;
+            team.easyAttempt[index] = new_attempt.toString();
+            await team.save();
+            return res.status(200).send({"msg":msg});
+        }
+        else {
+            return res.status(200).send({"msg":"No more attempts allowed"});
+        }
+    }
+    else if (type=='medium') {
+        const _attempts = team.medAttempt[index];
+        const attempts = parseInt(_attempts,10);
+        if (attempts < 3) {
+            let msg = "wrong answer";
+            console.log()
+            const actual_ans = med_ans[index];
+            if(actual_ans == ans){
+                team.medques[index] = points.toString();
+                msg = "correct answer";
+            }
+            const new_attempt = attempts+1;
+            team.medAttempt[index] = new_attempt.toString();
+            await team.save();
+            return res.status(200).send({"msg":msg});
+        }
+        else {
+            return res.status(200).send({"msg":"No more attempts allowed"});
+        }
+    }
+    else if (type=='hard') {
+        const _attempts = team.hardAttempt[index];
+        const attempts = parseInt(_attempts,10);
+        if (attempts < 3) {
+            let msg = "wrong answer";
+            const actual_ans = hard_ans[index];
+            if(actual_ans == ans){
+                team.hardques[index] = points.toString();
+                msg = "correct answer";
+            }
+            const new_attempt = attempts+1;
+            team.hardAttempt[index] = new_attempt.toString();
+            await team.save();
+            return res.status(200).send({"msg":msg});
+        }
+        else {
+            return res.status(200).send({"msg":"No more attempts allowed"});
+        }
+    }
+
+    else {
+        return res.status(403).send({"msg":"Internal server error"})
+    }
+}
+
 module.exports = {
     registerTeam,
-    loginTeam
+    loginTeam,
+    checkAnswer
 }

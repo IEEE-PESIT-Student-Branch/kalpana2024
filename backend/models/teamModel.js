@@ -42,6 +42,18 @@ const teamSchema = new Schema({
         type: [String],
         default: ["0","0","0","0","0"]
     },
+    easyAttempt: {
+        type: [String],
+        default: ["0","0","0","0","0"]
+    },
+    medAttempt: {
+        type: [String],
+        default: ["0","0","0","0","0"]
+    },
+    hardAttempt: {
+        type: [String],
+        default: ["0","0","0","0","0"]
+    },
     isAdmin: {
         type: Boolean,
         default: false
