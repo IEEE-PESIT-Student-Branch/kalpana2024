@@ -74,6 +74,12 @@ const checkAnswer = async (req,res) => {
             console.log()
             const actual_ans = easy_ans[index];
             if(actual_ans == ans){
+                if(team.easyques[index] == '0'){
+                    let old_points = parseInt(team.points,10);
+                    let new_points = old_points+points;
+                    new_points = new_points.toString();
+                    team.points = new_points;
+                }
                 team.easyques[index] = points.toString();
                 msg = "correct answer";
             }
@@ -94,6 +100,14 @@ const checkAnswer = async (req,res) => {
             console.log()
             const actual_ans = med_ans[index];
             if(actual_ans == ans){
+                console.log("hi");
+                if(team.medques[index] == '0'){
+                    console.log("hello");
+                    let old_points = parseInt(team.points,10);
+                    let new_points = old_points+points;
+                    new_points = new_points.toString();
+                    team.points = new_points;
+                }
                 team.medques[index] = points.toString();
                 msg = "correct answer";
             }
@@ -113,6 +127,12 @@ const checkAnswer = async (req,res) => {
             let msg = "wrong answer";
             const actual_ans = hard_ans[index];
             if(actual_ans == ans){
+                if(team.hardques[index] == '0'){
+                    let old_points = parseInt(team.points,10);
+                    let new_points = old_points+points;
+                    new_points = new_points.toString();
+                    team.points = new_points;
+                }
                 team.hardques[index] = points.toString();
                 msg = "correct answer";
             }
