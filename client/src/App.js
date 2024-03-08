@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 //import SignUp from './pages/signUp';
-import QuestionPage from './pages/questionPage';
+//import QuestionPage from './pages/questionPage';
+import FolderDownloader from './pages/folderDownloader';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<QuestionPage />}/>
+            <Route path='/' element={<FolderDownloader folderUrl="testBoi.zip" />}/>
           </Routes>
         </div>
       </BrowserRouter>
