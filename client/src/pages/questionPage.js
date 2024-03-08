@@ -36,37 +36,7 @@ const QuestionPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="questionPageMedium">
-                <h1>Medium</h1>
-                <div>
-                    <div className="mediumSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'}/>
-                    </div>
-                    <div className="mediumSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'}/>
-                    </div>
-                    <div className="mediumSec3"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'}/>
-                    </div>
-                </div>
-            </div>
-            <div className="questionPageHard">
-                <h1>Hard</h1>
-                <div>
-                    <div className="hardSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'}/>
-                    </div>
-                    <div className="hardSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'}/>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }
