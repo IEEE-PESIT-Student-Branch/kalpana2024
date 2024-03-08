@@ -2,8 +2,9 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 //import SignUp from './pages/signUp';
-//import QuestionPage from './pages/questionPage';
-import FolderDownloader from './pages/folderDownloader';
+import QuestionPage from './pages/questionPage';
+//import FolderDownloader from './pages/folderDownloader';
+//<FolderDownloader folderUrl="testBoi.zip" />
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<FolderDownloader folderUrl="testBoi.zip" />}/>
+            <Route path='/' element={<QuestionPage />}/>
           </Routes>
         </div>
       </BrowserRouter>
