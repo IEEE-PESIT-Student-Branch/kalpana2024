@@ -21,7 +21,14 @@
     }
 }
 
-@media screen and (max-width: 550px) {}
+@media screen and (max-width: 550px) {
+    #logoimage {
+        width: 4rem;
+        height: 4em;
+        mix-blend-mode: lighten;
+        padding: 1rem;
+    }
+}
 
 @media screen and (max-width: 450px) {
     #logoimage {

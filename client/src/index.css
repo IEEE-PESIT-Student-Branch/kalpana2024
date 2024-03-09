@@ -253,6 +253,9 @@ html, body {
   display: flex;
   flex-direction: row;
   font-size: 1.4rem;
+  border: 2px solid yellowgreen;
+  padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+  border-radius: 10px;
 }
 
 .questionPageNav .questionPageNavWrapper .questionPageNavPoints img {
@@ -441,6 +444,28 @@ html, body {
   .nextPrevButton div img {
     width: 90%;
   }
+
+  .questionPageNav .questionPageNavWrapper .questionPageNavTeam {
+    right: 2rem;
+  }
+
+  .questionPageNav .questionPageNavWrapper .questionPageNavPoints {
+    right: 9rem;
+    font-size: 1.1rem;
+  }
+
+  .questionPageNav .questionPageNavWrapper {
+    font-size: 1.1rem;
+  }
+
+  .questionPageEasy,.questionPageMedium,.questionPageHard {
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 4rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -483,6 +508,31 @@ html, body {
   
   .nextPrevButton div img {
     width: 90%;
+  }
+
+  .questionPageEasy,.questionPageMedium,.questionPageHard {
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+  }
+  
+  .questionPageHard {
+    margin-bottom: 6rem;
+  }
+  
+  .easySec1,.easySec2,.mediumSec1,.mediumSec2,.mediumSec3,.hardSec1,.hardSec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .questionPageNav .questionPageNavWrapper{
+    display: none; 
   }
 }
 
@@ -634,31 +684,7 @@ html, body {
   }
 
   .questionPageNav .questionPageNavWrapper{
-    display: flex;
-    align-items: center;
-    color: whitesmoke;
-    font-family: Poppins;
-    position: fixed;
-    bottom: 1rem;
-    z-index: 5;
-    font-size: 0.4rem;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );border-radius: 10px;
-    padding: 1rem 1rem 1rem 1rem;
-  }
-
-  .questionPageNav .questionPageNavWrapper .questionPageNavTeam {
-    display: none;
-  }
-
-  .questionPageNav .questionPageNavWrapper .questionPageNavComp {
-    margin-left: 2rem;
-  }
-  .questionPageNav .questionPageNavWrapper .questionPageNavPoints {
-    font-size: 0.4rem;
+    display: none; 
   }
 }
 

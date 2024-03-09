@@ -5,6 +5,8 @@ import './App.css';
 import QuestionPage from './pages/questionPage';
 import LeaderPage from './pages/leaderboardPage';
 import TimerPage from './pages/timerpage';
+//import FolderDownloader from './pages/folderDownloader';
+//<FolderDownloader folderUrl="testBoi.zip" />
 
 function App() {
   return (

@@ -1,8 +1,15 @@
+import React, { useState } from 'react';
 import './index.css';
 
-const Question = ({color,title,points}) => {
-    return(
-        <div className="questionCardContainer" style={{backgroundColor:`${color}`,width:`100%`}}>
+const Question = ({ color, title, points }) => {
+    const [expanded, setExpanded] = useState(false);
+
+    const toggleHeight = () => {
+        setExpanded(!expanded);
+    };
+
+    return (
+        <div className={`questionCardContainer ${expanded ? 'expanded' : ''}`} style={{ backgroundColor: `${color}`, width: '100%' }} onClick={toggleHeight}>
             <div className="questionCardWrapper">
                 <div className="questionCardContent">
                     <h1>{title}</h1>
@@ -10,7 +17,7 @@ const Question = ({color,title,points}) => {
                 <div className="questionCardPoints">{points} points</div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Question;
