@@ -15,6 +15,9 @@ const Question = ({ color, title, points }) => {
                     <h1>{title}</h1>
                 </div>
                 <div className="questionCardPoints">{points} points</div>
+                <div>
+                    <button class="button-54">Button 54</button>
+                </div>
             </div>
         </div>
     );
