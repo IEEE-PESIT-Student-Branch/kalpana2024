@@ -21,7 +21,7 @@ app.get('/api/leaderboard', async (req, res) => {
     console.log('Collection Name:', mongoose.connection.db.collection('test').collectionName);
 
     // Fetch leaderboard data directly without the Mongoose model/schema
-    const leaderboardData = await mongoose.connection.db.collection('test').find({}, { _id: 0, email: 0}).project({ team: 1, total: 1, wave1: 1, wave2: 1 }).sort({ total: -1 }).toArray();
+    const leaderboardData = await mongoose.connection.db.collection('test').find({}, { _id: 0, email: 0}).project({ team: 1, total: 1, wave1: 1, wave2: 1,wave3: 1, wave4: 1 }).sort({ total: -1 }).toArray();
 
     console.log('Fetched leaderboard data:', leaderboardData);
     res.json(leaderboardData);

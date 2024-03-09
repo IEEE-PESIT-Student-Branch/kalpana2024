@@ -1,40 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
-
+import './index.css'
 const Timer = () => {
-  const startDate = new Date(2024, 2, 15, 17, 0, 0); // March is 2 because months are zero-indexed
-  const endTime = startDate.getTime() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-  const [time, setTime] = useState(Math.floor((endTime - Date.now()) / 1000));
+  const [currentTime, setCurrentTime] = useState('24:00:00');
+  const targetDate = new Date('March 15, 2024 17:00:00'); // 5 PM on March 15th
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime((prevTime) => {
-        if (prevTime > 0) {
-          return prevTime - 1;
-        } else {
-          clearInterval(intervalId);
-          return 0;
-        }
-      });
-    }, 1000);
+    const updateTimer = () => {
+      const now = new Date();
+      if (now >= targetDate) {
+        const diff = targetDate.getTime() + (24 * 60 * 60 * 1000) - now.getTime();
+
+        // Ensure diff is non-negative (handles case where target date has passed)
+        const remainingTime = Math.max(diff, 0);
+
+        // Calculate remaining time in milliseconds
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        setCurrentTime(`${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+      }
+    };
+
+    // Initial update and cleanup function
+    updateTimer();
+    const intervalId = setInterval(updateTimer, 1000); // Update every second
 
     return () => clearInterval(intervalId);
   }, []);
 
-  const formatTime = (seconds) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secondsRemaining = seconds % 60;
-
-    return `${String(hours).padStart(2, '0')} : ${String(minutes).padStart(2, '0')} : ${String(
-      secondsRemaining
-    ).padStart(2, '0')}`;
-  };
-
   return (
     <div className="timer-container">
       <h1 className="timer-heading">Countdown Timer</h1>
-      <p className="timer-text">{formatTime(time)}</p>
+      <div className="timer-text">{currentTime}</div>
     </div>
   );
 };
