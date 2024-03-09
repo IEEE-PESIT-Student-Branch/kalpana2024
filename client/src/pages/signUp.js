@@ -1,80 +1,44 @@
-import { useState } from 'react'
+import Logo from'../components/logo/logo';
+import abs_bg from '../images/abs6.jpg';
 
-import FormOne from '../components/formOne';
-import FormTwo from '../components/formTwo';
+import wie from '../images/wie.png';
+import ieee_sight from '../images/ieee_sight.png';
+import south_camp from '../images/south_camp.png';
+import pes from '../images/pes.png';
+import pesuecc from '../images/pesuecc.png';
 
 const SignUp = () => {
-    const [formSection,setFormSection] = useState(0);
-
-    const [teamName,setTeamName] = useState('');
-    const [domain,setDomain] = useState('');
-    const [problem,setProblem] = useState('');
-    const [solution,setSolution] = useState('');
-
-    // const [mem1Name,setMem1Name] = setState('');
-    // const [mem1Gender,setMem1Gender] = setState('');
-    // const [mem1Pes,setMem1Pes] = setState('');
-    // const [mem1OtherUni,setMem1OtherUni] = setState('');
-    // const [mem1Sem,setMem1Sem] = setState('');
-    // const [mem1Branch,setMem1Branch] = setState('');
-    // const [mem1Phone,setMem1Phone] = setState('');
-    // const [mem1Github,setMem1Github] = setState('');
-    // const [mem1GaurdName,setMem1GaurdName] = setState('');
-    // const [mem1GaurdPh,setMem1GaurdPh] = setState('');
-
-    // const [mem2Name,setMem2Name] = setState('');
-    // const [mem2Gender,setMem2Gender] = setState('');
-    // const [mem2Pes,setMem2Pes] = setState('');
-    // const [mem2OtherUni,setMem2OtherUni] = setState('');
-    // const [mem2Sem,setMem2Sem] = setState('');
-    // const [mem2Branch,setMem2Branch] = setState('');
-    // const [mem2Phone,setMem2Phone] = setState('');
-    // const [mem2Github,setMem2Github] = setState('');
-    // const [mem2GaurdName,setMem2GaurdName] = setState('');
-    // const [mem2GaurdPh,setMem2GaurdPh] = setState('');
-
-    // const [mem3Name,setMem3Name] = setState('');
-    // const [mem3Gender,setMem3Gender] = setState('');
-    // const [mem3Pes,setMem3Pes] = setState('');
-    // const [mem3OtherUni,setMem3OtherUni] = setState('');
-    // const [mem3Sem,setMem3Sem] = setState('');
-    // const [mem3Branch,setMem3Branch] = setState('');
-    // const [mem3Phone,setMem3Phone] = setState('');
-    // const [mem3Github,setMem3Github] = setState('');
-    // const [mem3GaurdName,setMem3GaurdName] = setState('');
-    // const [mem3GaurdPh,setMem3GaurdPh] = setState('');
-
-    // const [mem4Name,setMem4Name] = setState('');
-    // const [mem4Gender,setMem4Gender] = setState('');
-    // const [mem4Pes,setMem4Pes] = setState('');
-    // const [mem4OtherUni,setMem4OtherUni] = setState('');
-    // const [mem4Sem,setMem4Sem] = setState('');
-    // const [mem4Branch,setMem4Branch] = setState('');
-    // const [mem4Phone,setMem4Phone] = setState('');
-    // const [mem4Github,setMem4Github] = setState('');
-    // const [mem4GaurdName,setMem4GaurdName] = setState('');
-    // const [mem4GaurdPh,setMem4GaurdPh] = setState('');
-
-    const formList = [
-        <FormOne
-            formSection={formSection}
-            setFormSection={setFormSection}
-            teamName={teamName}
-            setTeamName={setTeamName}
-            domain={domain}
-            setDomain={setDomain}
-            problem={problem}
-            setProblem={setProblem}
-            solution={solution}
-            setSolution={setSolution}
-        />,
-        <FormTwo
-        />
-    ]
 
     return (
         <div>
-        {formList[formSection]}
+            <div className='signUpNavContainer'>
+                <Logo/>
+                <div className='signUpNav'>
+                    <div>Home</div>
+                    <div>Login</div>
+                    <div>About us</div>
+                </div>
+            </div>
+            <hr/>
+            <div className='signUpLoginContainer' style={{backgroundImage:`url(${abs_bg})`}}>
+                <div className='signUpLoginWrapper'>
+                    <h1>KALPANA LOGIN</h1>
+                    <div>
+                        <input placeholder='Enter Team Name'/>
+                    </div>
+                    <div>
+                        <input placeholder='Enter Member Email ID'/>
+                    </div>
+                    <button className='button-54' style={{width:'13rem',margin:'0',padding:'0',marginBottom:'5rem',fontSize:'1rem',color:'rgb(38, 34, 34)'}}>Submit</button>
+                </div>
+            </div>
+            <div className='sponserContainer'>
+                <div style={{backgroundImage:`url(${pes})`}}>h</div>
+                <div style={{backgroundImage:`url(${pesuecc})`}}>i</div>
+                <div style={{backgroundImage:`url(${south_camp})`}}>i</div>
+                <div style={{backgroundImage:`url(${ieee_sight})`}}>i</div>
+                <div style={{backgroundImage:`url(${wie})`}}>i</div>
+            </div>
         </div>
     )
 }

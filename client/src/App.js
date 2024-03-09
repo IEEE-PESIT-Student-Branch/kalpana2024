@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 
-//import SignUp from './pages/signUp';
+import SignUp from './pages/signUp';
 import QuestionPage from './pages/questionPage';
 import LeaderPage from './pages/leaderboardPage';
 import TimerPage from './pages/timerpage';
@@ -14,7 +14,8 @@ function App() {
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<QuestionPage />}/>
+            <Route path='/' element={<SignUp />}/>
+            <Route path='/challenges' element={<QuestionPage />}/>
             <Route path='/leaderboard' element={<LeaderPage />}/>
             <Route path='/timer' element={<TimerPage />}/>
           </Routes>
