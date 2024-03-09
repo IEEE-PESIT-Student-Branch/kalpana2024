@@ -1,6 +1,8 @@
 import Logo from '../components/logo/logo';
 import Question from '../components/question/question';
 import coin from '../images/coin.png';
+import { Link } from 'react-router-dom';
+
 
 const QuestionPage = () => {
     return(
@@ -9,7 +11,12 @@ const QuestionPage = () => {
                 <Logo/>
                 <div className="questionPageNavWrapper">
                     <div className="questionPageNavComp">Home</div>
-                    <div className="questionPageNavComp">Leaderboard</div>
+                    <div className="questionPageNavComp">
+                    <Link to="/leaderboard">Leaderboard</Link>
+                        </div>
+                    <div className="questionPageNavComp">
+                    <Link to="/timer">Timer</Link>
+                        </div>    
                     <div className="questionPageNavComp">Sign Out</div>
                     <div className="questionPageNavPoints">
                         10080

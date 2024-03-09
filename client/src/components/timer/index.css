@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.timer-container {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins",cursive;
+  }
+  
+  .timer-heading {
+    color: white;
+  }
+  
+  .timer-text {
+    color: white;
+    font-size: 150px;
+    margin: 20px 0;
+  }
+  
