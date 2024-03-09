@@ -14,6 +14,12 @@ export default function Profiles({ Leaderboard }) {
           <h2>Wave 2</h2>
         </div>
         <div className="item">
+          <h2>Wave 3</h2>
+        </div>
+        <div className="item">
+          <h2>Wave 4</h2>
+        </div>
+        <div className="item">
           <h2>Total</h2>
         </div>
       </div>
@@ -37,6 +43,12 @@ function renderProfiles(data) {
           </div>
           <div className="item">
           <h3 className='name text-dark'>{value.wave2}</h3>
+          </div>
+          <div className="item">
+          <h3 className='name text-dark'>{value.wave3}</h3>
+          </div>
+          <div className="item">
+          <h3 className='name text-dark'>{value.wave4}</h3>
           </div>
           <div className="item">
             <span>{value.total}</span>

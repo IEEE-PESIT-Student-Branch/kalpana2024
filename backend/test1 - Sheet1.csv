@@ -1,5 +1,5 @@
-team,email,wave1,wave2,total
-team 1,team1@gmail.com,20,40,60
-team 2,team2@gmail.com,40,50,90
-team 3 ,team3@gmail.com,30,30,60
-team 4 ,team4@gmail.com,20,20,40
+team,email,wave1,wave2,wave3,wave4,total
+team 1,team1@gmail.com,20,40,20,10,90
+team 2,team2@gmail.com,40,50,10,10,110
+team 3 ,team3@gmail.com,30,30,30,30,120
+team 4 ,team4@gmail.com,20,20,30,20,90
