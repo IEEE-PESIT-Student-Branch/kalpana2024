@@ -3,28 +3,39 @@ import Question from '../components/question/question';
 import coin from '../images/coin.png';
 import { Link } from 'react-router-dom';
 
+import { UseLogout } from '../hooks/useLogout';
+import { UseUserContext } from '../hooks/useUserContext';
+
 
 const QuestionPage = () => {
+    const { logout } =  UseLogout();
+    const handleLogout = async (e) => {
+        await logout();
+        <Link to='/login'/>
+    }
+    const {user} = UseUserContext();
     return(
         <div>
             <div className="questionPageNav">
                 <Logo/>
                 <div className="questionPageNavWrapper">
-                    <div className="questionPageNavComp">Home</div>
                     <div className="questionPageNavComp">
-                    <Link to="/leaderboard">Leaderboard</Link>
-                        </div>
+                        <Link to="/challenges">Challenges</Link>
+                    </div>
                     <div className="questionPageNavComp">
-                    <Link to="/timer">Timer</Link>
-                        </div>    
-                    <div className="questionPageNavComp">Sign Out</div>
+                        <Link to="/leaderboard">Leaderboard</Link>
+                    </div>
+                    <div className="questionPageNavComp">
+                        <Link to="/timer">Timer</Link>
+                    </div>    
+                    <div className="questionPageNavComp" onClick={() => handleLogout()}>Sign Out</div>
                     <div className="questionPageNavPoints">
                         10080
                         <img src={coin} alt="point img"/>
                     </div>
                     <div className="questionPageNavTeam">
                         <div id="teamTeam">Team</div>
-                        <div id="teamName">Mavericks</div>
+                        <div id="teamName">{user.team_name}</div>
                     </div>
                 </div>
             </div>

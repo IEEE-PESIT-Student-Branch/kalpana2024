@@ -143,9 +143,18 @@ Link,a {
 
 .questionPageNav .questionPageNavWrapper .questionPageNavComp {
   margin-left: 2rem;
+  cursor: pointer;
 }
 
-.questionPageNav .questionPageNavWrapper .questionPageNavComp:hover {
+.questionPageNav .questionPageNavWrapper .questionPageNavComp a {
+  color: white;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavComp :hover {
+  color: burlywood;
+}
+
+.questionPageNav .questionPageNavWrapper .questionPageNavComp a:hover {
   color: burlywood;
 }
 

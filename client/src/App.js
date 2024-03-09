@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { UseUserContext } from './hooks/useUserContext';
 import './App.css';
 
 import SignUp from './pages/signUp';
@@ -9,13 +10,15 @@ import TimerPage from './pages/timerpage';
 //<FolderDownloader folderUrl="testBoi.zip" />
 
 function App() {
+  const {user} = UseUserContext();
+
   return (
     <div className="App">
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<SignUp />}/>
-            <Route path='/challenges' element={<QuestionPage />}/>
+            <Route path='/login' element={!user ? <SignUp/> : <QuestionPage />}/>
+            <Route path='/challenges' element={!user ? <SignUp/> : <QuestionPage />}/>
             <Route path='/leaderboard' element={<LeaderPage />}/>
             <Route path='/timer' element={<TimerPage />}/>
           </Routes>
