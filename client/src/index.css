@@ -6,6 +6,10 @@ html, body {
   overflow-y: auto;
 }
 
+Link,a {
+  text-decoration: none;
+}
+
 .pages {
   margin: 0;
   padding: 0;
@@ -300,6 +304,10 @@ html, body {
   margin-left: 8rem;
   margin-right: 8rem;
   margin-top: 4rem;
+}
+
+.questionPageEasy h1,.questionPageMedium h1,.questionPageHard h1 {
+  margin-bottom: 1.5rem;
 }
 
 .questionPageHard {
