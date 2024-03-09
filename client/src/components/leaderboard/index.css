@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+
+:root{
+    --color-dark: #481424;
+    --color-light: #F3F3F2;
+}
+
+#main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+}
+
+.board {
+    text-align: center;
+}
+
+.board .leaderboard{
+    margin-bottom: 1em;
+    color:#F3F3F2
+}
+
+.board .duration{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.board .duration > button{
+    border: 1px solid var(--color-light);
+    padding: .5em 2em;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.board .duration > button:hover{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.active{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+#profile{
+    /* display: flex; */
+
+    margin-top: 3em;
+}
+
+#profile .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+#profile .flex .item{
+    display: flex;
+    align-items: center;
+    color: #F3F3F2;
+}
+
+#profile .flex img{
+    width: 20%;
+    border-radius: 50%;
+}
+
+#profile .flex .info{
+   padding: 1em;
+}
+
+.text-dark{
+    color: white;
+}
+/* Add these styles for modern and rounded borders */
+#profile .flex {
+    border: 3px solid var(--color-dark); /* Border color between rows */
+    border-radius: 8px; /* Adjust the border-radius for rounded corners */
+    padding: 10px; /* Add padding for better spacing */
+    transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+  }
+  
+  /* Add hover effect for interactivity */
+  #profile .flex:hover {
+    background-color: var(--color-dark); /* Change background color on hover */
+    color: var(--color-light); /* Change text color on hover */
+  }
+  
+  /* Remove margin-bottom for the last row to avoid unnecessary spacing */
+  #profile .flex:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Additional styles for header row */
+  /* Additional styles for header row */
+#profile .flex.header {
+    background-color: var(--color-dark); /* Set a background color for the header row */
+    color: var(--color-light); /* Set text color for the header row */
+    font-weight: bold; /* Optionally, make the text bold for the header row */
+    border: none; /* Remove the border for the header row */
+    display: flex; /* Ensure the items in the header row are flex containers */
+    justify-content: space-between; /* Align items evenly in the header row */
+    align-items: center; /* Center-align items vertically in the header row */
+    padding-left: 32px; /* Add padding to the right of the header items */
+  }
+
+  
