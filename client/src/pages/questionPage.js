@@ -30,7 +30,7 @@ const QuestionPage = () => {
                     </div>    
                     <div className="questionPageNavComp" onClick={() => handleLogout()}>Sign Out</div>
                     <div className="questionPageNavPoints">
-                        10080
+                        {user.points}
                         <img src={coin} alt="point img"/>
                     </div>
                     <div className="questionPageNavTeam">
@@ -44,13 +44,13 @@ const QuestionPage = () => {
                 <h1>Easy</h1>
                 <div>
                     <div className="easySec1">
-                        <Question color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}/>
+                        <Question color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"} solved={user.easy_questions[0]}/>
+                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"} solved={user.easy_questions[1]}/>
+                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"} solved={user.easy_questions[2]}/>
                     </div>
                     <div className="easySec2">
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
-                        <Question color={'orange'} title={'DSYM'} points={'80'} attempts={"3"}/>
+                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"} solved={user.easy_questions[3]}/>
+                        <Question color={'orange'} title={'DSYM'} points={'80'} attempts={"3"} solved={user.easy_questions[4]}/>
                     </div>
                 </div>
             </div>
@@ -58,13 +58,13 @@ const QuestionPage = () => {
                 <h1>Medium</h1>
                 <div>
                     <div className="mediumSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}/>
+                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.med_questions[0]}/>
+                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.med_questions[1]}/>
                     </div>
                     <div className="mediumSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}/>
+                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.med_questions[2]}/>
+                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[3]}/>
+                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[4]}/>
                     </div>
                     <div className="mediumSec3"> 
                         <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
@@ -75,13 +75,13 @@ const QuestionPage = () => {
                 <h1>Hard</h1>
                 <div>
                     <div className="hardSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}/>
+                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.hard_questions[0]}/>
+                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.hard_questions[1]}/>
                     </div>
                     <div className="hardSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}/>
+                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.hard_questions[2]}/>
+                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.hard_questions[3]}/>
+                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.hard_questions[4]}/>
                     </div>
                 </div>
             </div>
