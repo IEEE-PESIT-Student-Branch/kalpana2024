@@ -5,7 +5,7 @@ class FolderDownloader extends React.Component {
     const { folderUrl } = this.props;
     const downloadLink = document.createElement('a');
     downloadLink.href = folderUrl;
-    downloadLink.download = 'testBoi.zip';
+    downloadLink.download = 'Poppins.zip';
     document.body.appendChild(downloadLink);
     downloadLink.click()
     document.body.removeChild(downloadLink);

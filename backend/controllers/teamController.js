@@ -75,6 +75,7 @@ const checkAnswer = async (req,res) => {
         console.log(attempts,typeof(attempts));
         if (attempts < 3) {
             let msg = "wrong answer";
+            let return_points = 0;
             console.log()
             const actual_ans = easy_ans[index];
             if(actual_ans == ans){
@@ -83,6 +84,7 @@ const checkAnswer = async (req,res) => {
                     let new_points = old_points+points;
                     new_points = new_points.toString();
                     team.points = new_points;
+                    return_points = points;
                 }
                 team.easyques[index] = points.toString();
                 msg = "correct answer";
@@ -90,7 +92,7 @@ const checkAnswer = async (req,res) => {
             const new_attempt = attempts+1;
             team.easyAttempt[index] = new_attempt.toString();
             await team.save();
-            return res.status(200).send({"msg":msg});
+            return res.status(200).send({"msg":msg,"points":return_points});
         }
         else {
             return res.status(200).send({"msg":"No more attempts allowed"});
@@ -101,6 +103,7 @@ const checkAnswer = async (req,res) => {
         const attempts = parseInt(_attempts,10);
         if (attempts < 3) {
             let msg = "wrong answer";
+            let return_points = 0;
             console.log()
             const actual_ans = med_ans[index];
             if(actual_ans == ans){
@@ -111,6 +114,7 @@ const checkAnswer = async (req,res) => {
                     let new_points = old_points+points;
                     new_points = new_points.toString();
                     team.points = new_points;
+                    return_points = points;
                 }
                 team.medques[index] = points.toString();
                 msg = "correct answer";
@@ -118,7 +122,7 @@ const checkAnswer = async (req,res) => {
             const new_attempt = attempts+1;
             team.medAttempt[index] = new_attempt.toString();
             await team.save();
-            return res.status(200).send({"msg":msg});
+            return res.status(200).send({"msg":msg,"points":return_points});
         }
         else {
             return res.status(200).send({"msg":"No more attempts allowed"});
@@ -129,6 +133,7 @@ const checkAnswer = async (req,res) => {
         const attempts = parseInt(_attempts,10);
         if (attempts < 3) {
             let msg = "wrong answer";
+            let return_points = 0;
             const actual_ans = hard_ans[index];
             if(actual_ans == ans){
                 if(team.hardques[index] == '0'){
@@ -136,6 +141,7 @@ const checkAnswer = async (req,res) => {
                     let new_points = old_points+points;
                     new_points = new_points.toString();
                     team.points = new_points;
+                    return_points = points;
                 }
                 team.hardques[index] = points.toString();
                 msg = "correct answer";
@@ -143,7 +149,7 @@ const checkAnswer = async (req,res) => {
             const new_attempt = attempts+1;
             team.hardAttempt[index] = new_attempt.toString();
             await team.save();
-            return res.status(200).send({"msg":msg});
+            return res.status(200).send({"msg":msg,"points":return_points});
         }
         else {
             return res.status(200).send({"msg":"No more attempts allowed"});
@@ -155,8 +161,17 @@ const checkAnswer = async (req,res) => {
     }
 }
 
+const getPoints = async (req,res) => {
+    const team = await Team.findOne({team_name: req.body.team_name});
+    if(!team) {
+        return res.status(403).send({"msg":"Your are not logged in"});
+    }
+    return res.status(200).send({"team_points":team.points});
+}
+
 module.exports = {
     registerTeam,
     loginTeam,
-    checkAnswer
+    checkAnswer,
+    getPoints
 }

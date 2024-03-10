@@ -1,7 +1,9 @@
 import Logo from '../components/logo/logo';
 import Question from '../components/question/question';
 import coin from '../images/coin.png';
+
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 import { UseLogout } from '../hooks/useLogout';
 import { UseUserContext } from '../hooks/useUserContext';
@@ -14,6 +16,8 @@ const QuestionPage = () => {
         <Link to='/login'/>
     }
     const {user} = UseUserContext();
+
+    const [totalPoints,setTotalPoints] = useState(user.points);
     return(
         <div>
             <div className="questionPageNav">
@@ -30,7 +34,7 @@ const QuestionPage = () => {
                     </div>    
                     <div className="questionPageNavComp" onClick={() => handleLogout()}>Sign Out</div>
                     <div className="questionPageNavPoints">
-                        {user.points}
+                        {totalPoints}
                         <img src={coin} alt="point img"/>
                     </div>
                     <div className="questionPageNavTeam">
@@ -44,13 +48,13 @@ const QuestionPage = () => {
                 <h1>Easy</h1>
                 <div>
                     <div className="easySec1">
-                        <Question color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"} solved={user.easy_questions[0]}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"} solved={user.easy_questions[1]}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"} solved={user.easy_questions[2]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"} solved={user.easy_questions[0]} index={'0'} questype={'easy'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"} solved={user.easy_questions[1]} index={'1'} questype={'easy'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"} solved={user.easy_questions[2]} index={'2'} questype={'easy'}/>
                     </div>
                     <div className="easySec2">
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"} solved={user.easy_questions[3]}/>
-                        <Question color={'orange'} title={'DSYM'} points={'80'} attempts={"3"} solved={user.easy_questions[4]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"} solved={user.easy_questions[3]} index={'3'} questype={'easy'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'DSYM'} points={'80'} attempts={"3"} solved={user.easy_questions[4]} index={'4'} questype={'easy'}/>
                     </div>
                 </div>
             </div>
@@ -58,13 +62,13 @@ const QuestionPage = () => {
                 <h1>Medium</h1>
                 <div>
                     <div className="mediumSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.med_questions[0]}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.med_questions[1]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.med_questions[0]} index={'0'} questype={'medium'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.med_questions[1]} index={'1'} questype={'medium'}/>
                     </div>
                     <div className="mediumSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.med_questions[2]}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[3]}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[4]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.med_questions[2]} index={'2'} questype={'medium'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[3]} index={'3'} questype={'medium'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[4]} index={'4'} questype={'medium'}/>
                     </div>
                     <div className="mediumSec3"> 
                         <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
@@ -75,13 +79,13 @@ const QuestionPage = () => {
                 <h1>Hard</h1>
                 <div>
                     <div className="hardSec1">
-                        <Question color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.hard_questions[0]}/>
-                        <Question color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.hard_questions[1]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.hard_questions[0]} index={'0'} questype={'hard'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.hard_questions[1]} index={'1'} questype={'hard'}/>
                     </div>
                     <div className="hardSec2"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.hard_questions[2]}/>
-                        <Question color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.hard_questions[3]}/>
-                        <Question color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.hard_questions[4]}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.hard_questions[2]} index={'2'} questype={'hard'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.hard_questions[3]} index={'3'} questype={'hard'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.hard_questions[4]} index={'4'} questype={'hard'}/>
                     </div>
                 </div>
             </div>

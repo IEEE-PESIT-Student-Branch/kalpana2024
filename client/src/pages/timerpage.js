@@ -9,7 +9,7 @@ const TimerPage = () => {
             <div className="questionPageNav">
                 <Logo/>
                 <div className="questionPageNavWrapper">
-                    <div className="questionPageNavComp">Home</div>
+                    <div className="questionPageNavComp">Challenges</div>
                     <div className="questionPageNavComp">
                         <Link to="/leaderboard">Leaderboard</Link>
                     </div>

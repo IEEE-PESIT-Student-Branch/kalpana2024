@@ -1,7 +1,7 @@
 .questionCardContainer {
     position: relative;
     height: 8rem;
-    max-height: 24rem; /* Set max-height to accommodate the maximum possible height */
+    max-height: 27rem; /* Set max-height to accommodate the maximum possible height */
     overflow: hidden; /* Hide any content that overflows the container */
     border-radius: 6px 6px 10px 10px;
     box-shadow: 5px 5px 5px black;
@@ -16,7 +16,7 @@
 }
 
 .questionCardContainer.expanded {
-    height: 24rem; /* Increase height to 16rem when expanded */
+    height: 27rem; /* Increase height to 16rem when expanded */
 }
 
 .questionCardContainer .questionCardWrapper {
