@@ -169,9 +169,34 @@ const getPoints = async (req,res) => {
     return res.status(200).send({"team_points":team.points});
 }
 
+const getAllTeamsSortedByPoints = async (req, res) => {
+    try {
+        // Fetch all teams
+        let teams = await Team.find();
+
+        // Convert points from strings to numbers
+        teams = teams.map(team => {
+            return {
+                ...team.toObject(),
+                points: parseInt(team.points, 10)
+            };
+        });
+
+        // Sort teams by points in descending order
+        teams.sort((a, b) => b.points - a.points);
+
+        // Return the sorted teams
+        res.status(200).json({ teams });
+    } catch (error) {
+        console.error("Error fetching teams:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+};
+
 module.exports = {
     registerTeam,
     loginTeam,
     checkAnswer,
-    getPoints
+    getPoints,
+    getAllTeamsSortedByPoints
 }
