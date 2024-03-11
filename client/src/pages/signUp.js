@@ -42,7 +42,7 @@ const SignUp = () => {
             <hr/>
             <div className='signUpLoginContainer' style={{backgroundImage:`url(${abs_bg})`}}>
                 <div className='signUpLoginWrapper'>
-                    <h1>KALPANA LOGIN</h1>
+                    <h1 style={{color:'black'}}>KALPANA LOGIN</h1>
                     <div>
                         <input
                             placeholder='Enter Team Name'

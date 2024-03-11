@@ -2,6 +2,7 @@ import Logo from '../components/logo/logo';
 import Board from '../components/leaderboard/leaderboard';
 import { Link } from 'react-router-dom';
 import coin from '../images/coin.png';
+
  
 const LeaderPage = () => {
     return (

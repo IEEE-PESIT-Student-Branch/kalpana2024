@@ -45,7 +45,10 @@ const loginTeam = async (req, res) => {
         const _easy_ques = team.easyques;
         const _med_ques = team.medques; 
         const _hard_ques = team.hardques;
-        return res.status(200).json({"team_name":_team_name,"team_email":_team_email,"mem_email":_mem_email,"points":_team_points,"easy_questions":_easy_ques,"med_questions":_med_ques,"hard_questions":_hard_ques});
+        const _easy_attempts = team.easyAttempt;
+        const _med_attempts = team.medAttempt; 
+        const _hard_attempts = team.hardAttempt;
+        return res.status(200).json({"team_name":_team_name,"team_email":_team_email,"mem_email":_mem_email,"points":_team_points,"easy_questions":_easy_ques,"med_questions":_med_ques,"hard_questions":_hard_ques,"easy_attempts":_easy_attempts,"med_attempts":_med_attempts,"hard_attempts":_hard_attempts});
 
     } catch (error) {
         console.error("Error logging in team:", error);
