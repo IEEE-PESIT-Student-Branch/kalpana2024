@@ -1,5 +1,6 @@
 const { Team,validate } = require("../models/teamModel");
 const { easy_ans, med_ans, hard_ans } = require('../answers');
+const { string } = require("joi");
 
 const registerTeam = async (req,res) => {
     const {error} = validate(req.body);
@@ -81,6 +82,7 @@ const checkAnswer = async (req,res) => {
             let return_points = 0;
             console.log()
             const actual_ans = easy_ans[index];
+            console.log("actual "+actual_ans);
             if(actual_ans == ans){
                 if(team.easyques[index] == '0'){
                     let old_points = parseInt(team.points,10);
@@ -109,6 +111,7 @@ const checkAnswer = async (req,res) => {
             let return_points = 0;
             console.log()
             const actual_ans = med_ans[index];
+            console.log("actual "+actual_ans);
             if(actual_ans == ans){
                 console.log("hi");
                 if(team.medques[index] == '0'){
@@ -138,6 +141,7 @@ const checkAnswer = async (req,res) => {
             let msg = "wrong answer";
             let return_points = 0;
             const actual_ans = hard_ans[index];
+            console.log("actual "+actual_ans);
             if(actual_ans == ans){
                 if(team.hardques[index] == '0'){
                     let old_points = parseInt(team.points,10);
@@ -196,10 +200,29 @@ const getAllTeamsSortedByPoints = async (req, res) => {
     }
 };
 
+const addPoints = async (req,res) => {
+    let points_to_add = parseInt(req.body.points,10);
+    const team = await Team.findOne({team_name: req.body.team_name});
+    if(!team) {
+        return res.status(403).send({"msg":"No team found"});
+    }
+    if(req.body.passphrase === "BUNSAMOSA"){
+        let old_points = parseInt(team.points,10);
+        let new_points = points_to_add+old_points;
+        team.points = new_points.toString();
+        await team.save();
+        return res.status(200).send({"updated_team":team});
+    }
+    else {
+        return res.status(403).send({"msg":"You are not authorized"});
+    }
+}
+
 module.exports = {
     registerTeam,
     loginTeam,
     checkAnswer,
     getPoints,
-    getAllTeamsSortedByPoints
+    getAllTeamsSortedByPoints,
+    addPoints
 }

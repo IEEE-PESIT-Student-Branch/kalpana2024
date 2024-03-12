@@ -1,7 +1,7 @@
 import First from './firstWave';
 import Second from './secondWave';
 import Third from './thirdWave';
-import FreeTime from './free';
+//import FreeTime from './free';
 
 import React, { useState, useEffect } from 'react';
 
@@ -65,7 +65,7 @@ const MainPage = () => {
         case 'Third':
           return <Third />;
         case 'FreeTime':
-          return <FreeTime />;
+          return <div>Break...</div>;
         case 'Ended':
           return <div>Ended</div>;
         case 'Waiting':

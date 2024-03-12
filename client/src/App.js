@@ -8,7 +8,6 @@ import SignUp from './pages/signUp';
 // import TimerPage from './pages/timerpage';
 //import FolderDownloader from './pages/folderDownloader';
 import MainPage from './pages/mainPage';
-import TestPage from './pages/testPage';
 
 function App() {
   const {user} = UseUserContext();
@@ -18,7 +17,7 @@ function App() {
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<TestPage/>}/>
+            <Route path='/' element={<SignUp/>}/>
             <Route path='/login' element={!user ? <SignUp/> : <MainPage />}/>
             <Route path='/challenges' element={!user ? <SignUp/> : <MainPage />}/>
           </Routes>

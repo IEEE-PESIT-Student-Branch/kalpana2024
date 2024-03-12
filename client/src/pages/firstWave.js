@@ -29,9 +29,6 @@ const FirstWave = ({user,totalPoints,setTotalPoints}) => {
                         <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[3]} index={'3'} questype={'medium'}/>
                         <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[4]} index={'4'} questype={'medium'}/>
                     </div>
-                    <div className="mediumSec3"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
-                    </div>
                 </div>
             </div>
             <div className="questionPageHard">

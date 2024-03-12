@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import FirstWave from './firstWave';
 import SecondWave from './secondWave';
 import ThirdWave from './thirdWave';
-import FreeTime from './free';
+import FourthWave from './fourthWave';
 
 
 const QuestionPage = ({totalPoints,setTotalPoints}) => {
@@ -23,41 +23,50 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
     }, []);
   
     useEffect(() => {
-      const targetFirstStart = new Date(currentTime);
-      const month = 3//targetFirstStart.getMonth() + 1;
-      const day = 15//targetFirstStart.getDate();
-      targetFirstStart.setHours(9,51, 0, 0);
-      const targetFirstEnd = new Date(currentTime);
-      targetFirstEnd.setHours(9, 52, 0, 0);
-  
-      const targetSecondStart = new Date(currentTime);
-      targetSecondStart.setHours(9, 53, 0, 0);
-      const targetSecondEnd = new Date(currentTime);
-      targetSecondEnd.setHours(9, 54, 0, 0);
-  
-      const targetThirdStart = new Date(currentTime);
-      targetThirdStart.setHours(9, 55, 0, 0);
-      const targetThirdEnd = new Date(currentTime);
-      targetThirdEnd.setHours(9, 56, 0, 0);
+        const targetFirstStart = new Date(currentTime);
+        const month = 3//targetFirstStart.getMonth() + 1;
+        const day = 15//targetFirstStart.getDate();
+        targetFirstStart.setHours(14,45, 0, 0);
+        const targetFirstEnd = new Date(currentTime);
+        targetFirstEnd.setHours(14, 47, 0, 0);
+    
+        const targetSecondStart = new Date(currentTime);
+        targetSecondStart.setHours(14, 48, 0, 0);
+        const targetSecondEnd = new Date(currentTime);
+        targetSecondEnd.setHours(14, 50, 0, 0);
+    
+        const targetThirdStart = new Date(currentTime);
+        targetThirdStart.setHours(14, 51, 0, 0);
+        const targetThirdEnd = new Date(currentTime);
+        targetThirdEnd.setHours(14, 53, 0, 0);
+
+        const targetFourthStart = new Date(currentTime);
+        targetFourthStart.setHours(14, 54, 0, 0);
+        const targetFourthEnd = new Date(currentTime);
+        targetFourthEnd.setHours(14, 56, 0, 0);
         if (month === 3 && day === 15 && currentTime < targetFirstStart) {
             setCurrentComponent('Waiting')
         }
-      else if (month === 3 && day === 15 && (currentTime >= targetFirstStart && currentTime < targetFirstEnd)) {
-        setCurrentComponent('First');
-      } else if (month === 3 && day === 15 && (currentTime >= targetFirstEnd && currentTime < targetSecondStart)) {
-        setCurrentComponent('FreeTime');
-      } else if (month === 3 && day === 15 && (currentTime >= targetSecondStart && currentTime < targetSecondEnd)) {
-        setCurrentComponent('Second');
-      } else if (month === 3 && day === 15 && (currentTime >= targetSecondEnd && currentTime < targetThirdStart)) {
-        setCurrentComponent('FreeTime');
-      } else if (month === 3 && day === 15 && (currentTime >= targetThirdStart && currentTime < targetThirdEnd)) {
-        setCurrentComponent('Third');
-      } else if (month === 3 && day === 15 && (currentTime >= targetThirdEnd) ) {
-        setCurrentComponent('Ended');
-      }
-      else {
-        setCurrentComponent('NOT THE DAY');
-      }
+        else if (month === 3 && day === 15 && (currentTime >= targetFirstStart && currentTime < targetFirstEnd)) {
+            setCurrentComponent('First');
+        } else if (month === 3 && day === 15 && (currentTime >= targetFirstEnd && currentTime < targetSecondStart)) {
+            setCurrentComponent('FreeTime');
+        } else if (month === 3 && day === 15 && (currentTime >= targetSecondStart && currentTime < targetSecondEnd)) {
+            setCurrentComponent('Second');
+        } else if (month === 3 && day === 15 && (currentTime >= targetSecondEnd && currentTime < targetThirdStart)) {
+            setCurrentComponent('FreeTime');
+        } else if (month === 3 && day === 15 && (currentTime >= targetThirdStart && currentTime < targetThirdEnd)) {
+            setCurrentComponent('Third');
+        } else if (month === 3 && day === 15 && (currentTime >= targetThirdEnd && currentTime < targetFourthStart)) {
+            setCurrentComponent('FreeTime');
+        } else if (month === 3 && day === 15 && (currentTime >= targetFourthStart && currentTime < targetFourthEnd)) {
+            setCurrentComponent('Fourth');
+        } else if (month === 3 && day === 15 && (currentTime >= targetFourthEnd) ) {
+            setCurrentComponent('Ended');
+        }
+        else {
+            setCurrentComponent('NOT THE DAY');
+        }
     }, [currentTime]);
   
     // Render the current component or "Waiting" or "Ended"
@@ -69,14 +78,16 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
           return <SecondWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
         case 'Third':
           return <ThirdWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
+        case 'Fourth':
+            return <FourthWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
         case 'FreeTime':
-          return <FreeTime />;
+          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>Break....</div>;
         case 'Ended':
-          return <div>Ended</div>;
+          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>Ended</div>;
         case 'Waiting':
-            return <div>Waiting....</div>;
+            return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'5rem',justifyContent:'center'}}>Waiting....</div>;
         default:
-          return <div>NOT THE DAY BOI...</div>;
+          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>NOT THE DAY BOI...</div>;
       }
     };
     return <div>{renderComponent()}</div>;
