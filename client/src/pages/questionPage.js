@@ -1,61 +1,85 @@
-import Question from '../components/question/question';
-
 import { UseUserContext } from '../hooks/useUserContext';
+
+import React, { useState, useEffect } from 'react';
+import FirstWave from './firstWave';
+import SecondWave from './secondWave';
+import ThirdWave from './thirdWave';
+import FreeTime from './free';
 
 
 const QuestionPage = ({totalPoints,setTotalPoints}) => {
     const {user} = UseUserContext();
 
-    return(
-        <div>
-            
-            <div className="questionPageEasy">
-                <h1>Easy</h1>
-                <div>
-                    <div className="easySec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"} solved={user.easy_questions[0]} index={'0'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"} solved={user.easy_questions[1]} index={'1'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"} solved={user.easy_questions[2]} index={'2'} questype={'easy'}/>
-                    </div>
-                    <div className="easySec2">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"} solved={user.easy_questions[3]} index={'3'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'DSYM'} points={'80'} attempts={"3"} solved={user.easy_questions[4]} index={'4'} questype={'easy'}/>
-                    </div>
-                </div>
-            </div>
-            <div className="questionPageMedium">
-                <h1>Medium</h1>
-                <div>
-                    <div className="mediumSec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.med_questions[0]} index={'0'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.med_questions[1]} index={'1'} questype={'medium'}/>
-                    </div>
-                    <div className="mediumSec2"> 
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.med_questions[2]} index={'2'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[3]} index={'3'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[4]} index={'4'} questype={'medium'}/>
-                    </div>
-                    <div className="mediumSec3"> 
-                        <Question color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}/>
-                    </div>
-                </div>
-            </div>
-            <div className="questionPageHard">
-                <h1>Hard</h1>
-                <div>
-                    <div className="hardSec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.hard_questions[0]} index={'0'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.hard_questions[1]} index={'1'} questype={'hard'}/>
-                    </div>
-                    <div className="hardSec2"> 
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.hard_questions[2]} index={'2'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.hard_questions[3]} index={'3'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.hard_questions[4]} index={'4'} questype={'hard'}/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+
+    const [currentComponent, setCurrentComponent] = useState(null);
+    const [currentTime, setCurrentTime] = useState(new Date());
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
+  
+      return () => clearInterval(intervalId);
+    }, []);
+  
+    useEffect(() => {
+      const targetFirstStart = new Date(currentTime);
+      const month = 3//targetFirstStart.getMonth() + 1;
+      const day = 15//targetFirstStart.getDate();
+      targetFirstStart.setHours(9,51, 0, 0);
+      const targetFirstEnd = new Date(currentTime);
+      targetFirstEnd.setHours(9, 52, 0, 0);
+  
+      const targetSecondStart = new Date(currentTime);
+      targetSecondStart.setHours(9, 53, 0, 0);
+      const targetSecondEnd = new Date(currentTime);
+      targetSecondEnd.setHours(9, 54, 0, 0);
+  
+      const targetThirdStart = new Date(currentTime);
+      targetThirdStart.setHours(9, 55, 0, 0);
+      const targetThirdEnd = new Date(currentTime);
+      targetThirdEnd.setHours(9, 56, 0, 0);
+        if (month === 3 && day === 15 && currentTime < targetFirstStart) {
+            setCurrentComponent('Waiting')
+        }
+      else if (month === 3 && day === 15 && (currentTime >= targetFirstStart && currentTime < targetFirstEnd)) {
+        setCurrentComponent('First');
+      } else if (month === 3 && day === 15 && (currentTime >= targetFirstEnd && currentTime < targetSecondStart)) {
+        setCurrentComponent('FreeTime');
+      } else if (month === 3 && day === 15 && (currentTime >= targetSecondStart && currentTime < targetSecondEnd)) {
+        setCurrentComponent('Second');
+      } else if (month === 3 && day === 15 && (currentTime >= targetSecondEnd && currentTime < targetThirdStart)) {
+        setCurrentComponent('FreeTime');
+      } else if (month === 3 && day === 15 && (currentTime >= targetThirdStart && currentTime < targetThirdEnd)) {
+        setCurrentComponent('Third');
+      } else if (month === 3 && day === 15 && (currentTime >= targetThirdEnd) ) {
+        setCurrentComponent('Ended');
+      }
+      else {
+        setCurrentComponent('NOT THE DAY');
+      }
+    }, [currentTime]);
+  
+    // Render the current component or "Waiting" or "Ended"
+    const renderComponent = () => {
+      switch (currentComponent) {
+        case 'First':
+          return <FirstWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints}/>;
+        case 'Second':
+          return <SecondWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
+        case 'Third':
+          return <ThirdWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
+        case 'FreeTime':
+          return <FreeTime />;
+        case 'Ended':
+          return <div>Ended</div>;
+        case 'Waiting':
+            return <div>Waiting....</div>;
+        default:
+          return <div>NOT THE DAY BOI...</div>;
+      }
+    };
+    return <div>{renderComponent()}</div>;
 }
 
 export default QuestionPage;
