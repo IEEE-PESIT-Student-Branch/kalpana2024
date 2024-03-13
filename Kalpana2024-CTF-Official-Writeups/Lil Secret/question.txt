@@ -1,0 +1,5 @@
+Question:
+Outsmart your brother? 
+
+I found the flag, but my brother wrote a program to encrypt all his text files. He has a study guide too, but I don't know if that helps.
+

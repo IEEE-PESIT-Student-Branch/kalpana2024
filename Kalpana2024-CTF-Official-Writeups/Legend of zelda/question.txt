@@ -1,0 +1,8 @@
+In the Legend of Zelda series, This iconic item is often used to transport Link through underground passages, across gaps, and even as a weapon. Also Link to navigate through dungeons and travel between locations. 
+
+Hint: It's not just any old mode of transportation; it's a versatile tool found in dungeons and mines alike.
+
+There are instructions for everything to use them. What are those? 
+
+
+Flag Format - Kalpana2024{} (words seperated by '_')
