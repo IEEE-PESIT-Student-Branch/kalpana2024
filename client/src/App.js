@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <div className='pages'>
           <Routes>
-            <Route path='/' element={<SignUp/>}/>
+            <Route path='/' element={!user ? <SignUp/> : <MainPage />}/>
             <Route path='/login' element={!user ? <SignUp/> : <MainPage />}/>
             <Route path='/challenges' element={!user ? <SignUp/> : <MainPage />}/>
           </Routes>

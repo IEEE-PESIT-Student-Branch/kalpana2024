@@ -10,6 +10,15 @@ import FourthWave from './fourthWave';
 const QuestionPage = ({totalPoints,setTotalPoints}) => {
     const {user} = UseUserContext();
 
+    const compStyle = {
+      color:'whitesmoke',
+      fontFamily:'SDRobot',
+      fontSize:'7rem',
+      justifyContent:'center',
+      display:'flex',
+      alignItems:'center',
+      marginTop:'10rem'
+    }
 
     const [currentComponent, setCurrentComponent] = useState(null);
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -26,24 +35,24 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
         const targetFirstStart = new Date(currentTime);
         const month = 3//targetFirstStart.getMonth() + 1;
         const day = 15//targetFirstStart.getDate();
-        targetFirstStart.setHours(14,45, 0, 0);
+        targetFirstStart.setHours(20,30, 0, 0);
         const targetFirstEnd = new Date(currentTime);
-        targetFirstEnd.setHours(14, 47, 0, 0);
+        targetFirstEnd.setHours(20, 35, 0, 0);
     
         const targetSecondStart = new Date(currentTime);
-        targetSecondStart.setHours(14, 48, 0, 0);
+        targetSecondStart.setHours(20, 36, 0, 0);
         const targetSecondEnd = new Date(currentTime);
-        targetSecondEnd.setHours(14, 50, 0, 0);
+        targetSecondEnd.setHours(20, 40, 0, 0);
     
         const targetThirdStart = new Date(currentTime);
-        targetThirdStart.setHours(14, 51, 0, 0);
+        targetThirdStart.setHours(20, 41, 0, 0);
         const targetThirdEnd = new Date(currentTime);
-        targetThirdEnd.setHours(14, 53, 0, 0);
+        targetThirdEnd.setHours(20, 45, 0, 0);
 
         const targetFourthStart = new Date(currentTime);
-        targetFourthStart.setHours(14, 54, 0, 0);
+        targetFourthStart.setHours(20, 46, 0, 0);
         const targetFourthEnd = new Date(currentTime);
-        targetFourthEnd.setHours(14, 56, 0, 0);
+        targetFourthEnd.setHours(20, 50, 0, 0);
         if (month === 3 && day === 15 && currentTime < targetFirstStart) {
             setCurrentComponent('Waiting')
         }
@@ -81,13 +90,13 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
         case 'Fourth':
             return <FourthWave user={user} totalPoints={totalPoints} setTotalPoints={setTotalPoints} />;
         case 'FreeTime':
-          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>Break....</div>;
+          return <div style={compStyle}>Break</div>;
         case 'Ended':
-          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>Ended</div>;
+          return <div style={compStyle}>Ended</div>;
         case 'Waiting':
-            return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'5rem',justifyContent:'center'}}>Waiting....</div>;
+            return <div style={compStyle}>WILL BEGIN SHORTLY</div>;
         default:
-          return <div style={{color:'whitesmoke',fontFamily:'Poppins',fontSize:'10rem'}}>NOT THE DAY BOI...</div>;
+          return <div style={compStyle}>NOT THE DAY BOI...</div>;
       }
     };
     return <div>{renderComponent()}</div>;
