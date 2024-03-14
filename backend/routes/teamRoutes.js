@@ -5,6 +5,8 @@ const {
     loginTeam,
     checkAnswer,
     getPoints,
+    getAllTeams,
+    getQuestionsSolved,
     getAllTeamsSortedByPoints,
     addPoints
 } =  require("../controllers/teamController")
@@ -21,6 +23,10 @@ router.post("/addpointsboi", addPoints);
 
 router.post("/getPoints", getPoints);
 
+router.post("/getQuestionsSolved", getQuestionsSolved);
+
 router.get("/getTeamsForLeaderboard",getAllTeamsSortedByPoints);
+
+router.get("/getAllTeams",getAllTeams)
 
 module.exports = router;

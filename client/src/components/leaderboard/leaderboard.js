@@ -1,36 +1,48 @@
-import './index.css';
 import React, { useState, useEffect } from 'react';
 import Profiles from './profiles';
+import './index.css';
 
+const fetchData = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Error fetching data from ${url}:`, error.message);
+    return null; // Return null if an error occurs
+  }
+};
 
 export default function Board() {
-  const [leaderboardData, setLeaderboardData] = useState([]);
+  const [teamsData, setTeamsData] = useState([]);
 
   useEffect(() => {
-    const fetchLeaderboardData = async () => {
+    const fetchTeamsData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/leaderboard');
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log('Fetched leaderboard data:', data);
-        setLeaderboardData(data);
+        const data = await fetchData('http://localhost:8080/api/teams');
+
+        console.log('Fetched teams data:', data); // Log teams data
+
+        // Update state with fetched data
+        setTeamsData(data || []);
       } catch (error) {
-        console.error('Error fetching leaderboard data:', error.message);
+        console.error('Error fetching data:', error.message);
       }
     };
-  
-    fetchLeaderboardData();
-    const intervalId = setInterval(fetchLeaderboardData, 60000);
-  
+
+    fetchTeamsData();
+    const intervalId = setInterval(fetchTeamsData, 60000);
+
     return () => clearInterval(intervalId);
   }, []);
-  
+
   return (
     <div className="board">
       <h1 className='leaderboard'>Leaderboard</h1>
-      <Profiles Leaderboard={leaderboardData}></Profiles>
+      {/* Pass teamsData to the Profiles component */}
+      <Profiles Leaderboard={teamsData}></Profiles>
     </div>
   );
 }
