@@ -11,6 +11,8 @@ These are the challenges
 ├── Python
 ├── Lil Secret
 ├── Mr.Emoji
+├── Tangled
+├── X
 ├── Legend of Zelda
 └── Humanity
 ```
