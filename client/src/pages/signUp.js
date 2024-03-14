@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { UseLogin } from '../hooks/useLogin'
 import { useState } from 'react'
 
-import Logo from'../components/logo/logo';
 import abs_bg from '../images/abs6.jpg';
 
 import wie from '../images/wie.png';
@@ -12,6 +11,7 @@ import ieee_sight from '../images/ieee_sight.png';
 import south_camp from '../images/south_camp.png';
 import pes from '../images/pes.png';
 import pesuecc from '../images/pesuecc.png';
+import Logo from '../components/logo/logo';
 
 const SignUp = () => {
 
@@ -34,9 +34,15 @@ const SignUp = () => {
             <div className='signUpNavContainer'>
                 <Logo/>
                 <div className='signUpNav'>
-                    <div>Home</div>
-                    <div>Login</div>
-                    <div>About us</div>
+                    <div>
+                        <Link to="/home">Home</Link>
+                    </div>
+                    <div>
+                        <Link to="/login">Login</Link>
+                    </div>
+                    <div>
+                        <Link to="/rules">Rules</Link>
+                    </div>
                 </div>
             </div>
             <hr/>

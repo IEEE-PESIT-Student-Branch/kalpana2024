@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-const Question = ({ color, title, points, attempts, solved, index, questype, totalPoints, setTotalPoints }) => {
+const Question = ({ color, title, points, attempts, solved, index, questype, totalPoints, setTotalPoints, author, flagFormat }) => {
     const [expanded, setExpanded] = useState(false);
     const [chances, setChances] = useState(attempts);
     const [ifSolved, setIfSolved] = useState(0);
@@ -13,26 +13,57 @@ const Question = ({ color, title, points, attempts, solved, index, questype, tot
         setIfSolved(temp_value);
     }, [solved]);
 
-    const folderList = [
-        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2FPoppins.zip?alt=media&token=6459c608-01ea-4ef6-878e-62c70a5b161c",
-        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2Fcosmic-vibrant-font.zip?alt=media&token=cb7ec6de-0bc7-4307-8db4-859cb8dd1074",
-        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2Fedge-of-the-galaxy-font.zip?alt=media&token=b6a8206a-87a3-46f7-96cb-a57d4b4f7db8",
-        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2Fspeedy-font.zip?alt=media&token=fe66d513-79f7-4709-b57a-b6b09fca12f8",
-        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2FtestBoi.zip?alt=media&token=eea88efa-66d9-4410-b45f-ab65670fc422"
+    let folderList;
+    let fileName;
+
+    const folderListEasy = [
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F1st%20wave%2Feasy%2FFormula.png?alt=media&token=af657ae6-d09b-4bf3-b75c-5353c300a98b",
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F1st%20wave%2Feasy%2FMixMe.png?alt=media&token=a79c63aa-76bb-4ade-8873-f26796e6b34c"
     ];
 
-    const fileName = [
-        "Poppins.zip",
-        "cosmic-vibrant-font.zip",
-        "edge-of-the-galaxy-font.zip",
-        "speedy-font.zip",
-        "testBoi.zip"
+    const fileNameEasy = [
+        "Formula.png",
+        "MixMe.png"
+    ];
+
+    const folderListMedium = [
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F1st%20wave%2Fmedium%2Fselfie.jpg?alt=media&token=15ecf9d7-7676-45ea-a3f3-17c8576e6c38",
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F2nd%20wave%2Fmedium%2Fsource.puml?alt=media&token=bf27a951-c633-485b-9eb7-05587b8e46de"
+    ];
+
+    const fileNameMedium = [
+        "selfie.jpg",
+        "source.puml"
+    ];
+
+    const folderListHard = [
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F2nd%20wave%2Fhard%2FCNC-machine.txt?alt=media&token=67f0a315-0e92-48d1-b49e-92fae131e250",
+        "https://firebasestorage.googleapis.com/v0/b/twilight-music-streaming.appspot.com/o/questions%2F3rd%20wave%2Fhard%2FMemes.zip?alt=media&token=09e31e1d-fec4-416c-9e88-f793b7ef91b6"
+    ];
+
+    const fileNameHard = [
+        "CNC-machine.txt",
+        "Memes.zip" //
     ];
 
     const handleDownload = () => {
+        if(questype === "easy"){
+            folderList = folderListEasy;
+            fileName = fileNameEasy; 
+        }
+        if(questype === "medium"){
+            folderList = folderListMedium;
+            fileName = fileNameMedium;
+        }
+        if(questype === "hard"){
+            folderList = folderListHard;
+            fileName = fileNameHard;
+        }
+
         const folderUrl = folderList[index];
         const downloadLink = document.createElement('a');
         downloadLink.href = folderUrl;
+        
         downloadLink.download = `${fileName[index]}`;
         document.body.appendChild(downloadLink);
         downloadLink.click();
@@ -93,8 +124,9 @@ const Question = ({ color, title, points, attempts, solved, index, questype, tot
                         <div onClick={handleFormSubmit}>Go !</div>
                     </div>
                     <ul>
-                        <li>Flag format: Kalpana_CTF{' { flag }'}</li>
+                        <li>{flagFormat}</li>
                         <li>Only {attempts} attempts possible</li>
+                        <li>Author : {author}</li>
                         {msg && msg.msg ? <li style={{ color: 'red' }}>{msg.msg}</li> : <div></div>}
                     </ul>
                 </div>
