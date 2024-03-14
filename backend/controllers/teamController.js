@@ -176,6 +176,27 @@ const getPoints = async (req,res) => {
     return res.status(200).send({"team_points":team.points});
 }
 
+const getQuestionsSolved = async (req, res) => {
+    const team = await Team.findOne({ team_name: req.body.team_name });
+  
+    if (!team) {
+      return res.status(403).send({ "msg": "You are not logged in" });
+    }
+  
+    const countEasy = team.easyques.filter(element => element !== 0).length;
+    const countMedium = team.mediumques.filter(element => element !== 0).length;
+    const countHard = team.hardques.filter(element => element !== 0).length;
+  
+    const questionsSolved = {
+      easy: countEasy,
+      medium: countMedium,
+      hard: countHard,
+    };
+  
+    return res.status(200).json(questionsSolved);
+  };
+  
+
 const getAllTeamsSortedByPoints = async (req, res) => {
     try {
         // Fetch all teams
@@ -200,6 +221,16 @@ const getAllTeamsSortedByPoints = async (req, res) => {
     }
 };
 
+
+const getAllTeams = async(req,res) =>{
+    try {
+        const teams = await Team.find();
+        res.json(teams);
+      } catch (error) {
+        res.status(500).json({ message: error.message });
+      }
+}
+
 const addPoints = async (req,res) => {
     let points_to_add = parseInt(req.body.points,10);
     const team = await Team.findOne({team_name: req.body.team_name});
@@ -223,6 +254,8 @@ module.exports = {
     loginTeam,
     checkAnswer,
     getPoints,
+    getAllTeams,
+    getQuestionsSolved,
     getAllTeamsSortedByPoints,
     addPoints
 }

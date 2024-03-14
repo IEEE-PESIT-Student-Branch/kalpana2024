@@ -21,7 +21,7 @@ const MainPage = () => {
       const targetFirstStart = new Date(currentTime);
       const month = 3//targetFirstStart.getMonth() + 1;
       const day = 15//targetFirstStart.getDate();
-      targetFirstStart.setHours(22, 54, 0, 0);
+      targetFirstStart.setHours(22, 30, 0, 0);
       const targetFirstEnd = new Date(currentTime);
       targetFirstEnd.setHours(22, 56, 0, 0);
   
