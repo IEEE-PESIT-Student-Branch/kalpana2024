@@ -23,7 +23,8 @@
 
 .board .leaderboard{
     margin-bottom: 1em;
-    color:#F3F3F2
+    color:#F3F3F2;
+    margin-top: 2rem;
 }
 
 .board .duration{

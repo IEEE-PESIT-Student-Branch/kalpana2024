@@ -27,7 +27,8 @@ const Rules = () => {
                         <li>Participants should not carry out any attacks on the CTF infrastructure.</li>
                         <li>No DoS, DDoS, automated scans, or generating any large amount of traffic by any other means on any challenges and other contest infrastructure. It is not permitted and is never intended in any challenge.</li>
                         <li>Sharing the flags, or providing overly-revealing hints with anyone through any medium during the period of the Contest shall be considered as cheating.</li>
-                        <li>The format of the flag is Kalpana_CTF{"{flag}"} unless stated otherwise!</li>
+                        <li>The format of the flag is Kalpana{"{flag}"} unless stated otherwise!</li>
+                        <li>Teams need to submit the coding question to jawahar.balachandher@gmail.com</li>
                         <li>The decision of organizers will be final. In case of any dispute, the decision of the Organizers will be final and binding</li>
                         <li>By participating in the contest, you agree that you have read the above rules and fully agree to adhere to them. Any </li>
                         <li>If found to be cheating, the Participant shall be disqualified from the Contest, with immediate effect.</li>

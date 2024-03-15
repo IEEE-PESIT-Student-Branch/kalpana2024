@@ -35,24 +35,24 @@ const QuestionPage = ({totalPoints,setTotalPoints}) => {
         const targetFirstStart = new Date(currentTime);
         const month = 3//targetFirstStart.getMonth() + 1;
         const day = 15//targetFirstStart.getDate();
-        targetFirstStart.setHours(12,18, 0, 0);
+        targetFirstStart.setHours(11,0, 0, 0);
         const targetFirstEnd = new Date(currentTime);
-        targetFirstEnd.setHours(19, 0, 0, 0);
+        targetFirstEnd.setHours(11, 50, 0, 0);
     
         const targetSecondStart = new Date(currentTime);
-        targetSecondStart.setHours(14, 1, 0, 0);
+        targetSecondStart.setHours(11, 10, 0, 0);
         const targetSecondEnd = new Date(currentTime);
-        targetSecondEnd.setHours(14, 10, 0, 0);
+        targetSecondEnd.setHours(11, 55, 0, 0);
     
         const targetThirdStart = new Date(currentTime);
-        targetThirdStart.setHours(14, 11, 0, 0);
+        targetThirdStart.setHours(11, 11, 0, 0);
         const targetThirdEnd = new Date(currentTime);
-        targetThirdEnd.setHours(14, 20, 0, 0);
+        targetThirdEnd.setHours(11, 50, 0, 0);
 
         const targetFourthStart = new Date(currentTime);
-        targetFourthStart.setHours(14, 21, 0, 0);
+        targetFourthStart.setHours(13, 10, 0, 0);
         const targetFourthEnd = new Date(currentTime);
-        targetFourthEnd.setHours(14, 40, 0, 0);
+        targetFourthEnd.setHours(13, 45, 0, 0);
         if (month === 3 && day === 15 && currentTime < targetFirstStart) {
             setCurrentComponent('Waiting')
         }

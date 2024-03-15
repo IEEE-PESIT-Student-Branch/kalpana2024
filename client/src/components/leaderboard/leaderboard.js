@@ -1,48 +1,82 @@
 import React, { useState, useEffect } from 'react';
-import Profiles from './profiles';
 import './index.css';
 
-const fetchData = async (url) => {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching data from ${url}:`, error.message);
-    return null; // Return null if an error occurs
-  }
-};
-
-export default function Board() {
-  const [teamsData, setTeamsData] = useState([]);
-
+const Board = () => {
+  const [teamData,setTeamData] = useState(null);
   useEffect(() => {
-    const fetchTeamsData = async () => {
-      try {
-        const data = await fetchData('http://localhost:8080/api/teams');
+    const fetchData = async () => {
+    try {
+        const response = await fetch('/api/getTeamsForLeaderboard', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-        console.log('Fetched teams data:', data); // Log teams data
+        if (!response.ok) {
+            console.log("Unable to load teams");
+            return;
+        }
 
-        // Update state with fetched data
-        setTeamsData(data || []);
-      } catch (error) {
-        console.error('Error fetching data:', error.message);
-      }
+        const data = await response.json();
+        setTeamData(data);
+        console.log("Loaded team data");
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
     };
 
-    fetchTeamsData();
-    const intervalId = setInterval(fetchTeamsData, 60000);
-
-    return () => clearInterval(intervalId);
+    fetchData();
   }, []);
-
-  return (
+  return(
     <div className="board">
       <h1 className='leaderboard'>Leaderboard</h1>
-      {/* Pass teamsData to the Profiles component */}
-      <Profiles Leaderboard={teamsData}></Profiles>
+      <div id="profile">
+      <div className="flex header">
+        <div className="item">
+          <h2>Team</h2>
+        </div>
+        <div className="item">
+          <h2>Easy</h2>
+        </div>
+        <div className="item">
+          <h2>Medium</h2>
+        </div>
+        <div className="item">
+          <h2>Hard</h2>
+        </div>
+        <div className="item">
+          <h2>Points</h2>
+        </div>
+      </div>
+      {teamData ? teamData.teams.map((team,index) => (
+        <div className="flex" key={index}>
+        <div className="item">
+          <div className="info">
+            <h3 className='name text-dark'>{team.team_name}</h3> {/* Assuming team name is stored in 'name' property */}
+          </div>
+        </div>
+        <div className="item">
+          {/* Display number of easy questions */}
+          <h3 className='name text-dark'>{team.easyques.filter(value => parseInt(value, 10) > 0).length}</h3>
+        </div>
+        <div className="item">
+          {/* Display number of medium questions */}
+          <h3 className='name text-dark'>{team.medques.filter(value => parseInt(value, 10) > 0).length}</h3>
+        </div>
+        <div className="item">
+          {/* Display number of hard questions */}
+          <h3 className='name text-dark'>{team.hardques.filter(value => parseInt(value, 10) > 0).length}</h3>
+        </div>
+
+        <div className="item">
+        <h3 className='name text-dark'>{team.points}</h3> {/* Assuming team name is stored in 'name' property */}
+        </div>
+      </div>
+      )) : (
+        <p style={{color:'white'}}>Loading....</p>
+      )}
     </div>
-  );
+    </div>
+  )
 }
+
+export default Board;

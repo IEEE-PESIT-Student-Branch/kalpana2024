@@ -7,13 +7,15 @@ const SecondWave = ({user,totalPoints,setTotalPoints}) => {
                 <h1>Easy | Second Wave</h1>
                 <div>
                     <div className="easySec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'Bombs Landed'} points={'80'} attempts={"3"} solved={user.easy_questions[5]} index={'5'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"} solved={user.easy_questions[6]} index={'6'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"} solved={user.easy_questions[7]} index={'7'} questype={'easy'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'Mr.Emoji'} points={'50'} attempts={"3"} solved={user.easy_questions[3]} index={'3'} questype={'easy'} author={"Adithi H"} flagFormat={"Flag format: Kalpana2024{XYZ}"}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Apt 3'} points={'30'} attempts={"1"} solved={user.easy_questions[12]} index={'12'} questype={'easy'} author={"Musharraf"} flagFormat={"Refer to the file"}/>
                     </div>
                     <div className="easySec2">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"} solved={user.easy_questions[8]} index={'8'} questype={'easy'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'DSYM'} points={'80'} attempts={"3"} solved={user.easy_questions[9]} index={'9'} questype={'easy'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Fish'} points={'50'} attempts={"3"} solved={user.easy_questions[4]} index={'4'} questype={'easy'} author={"Adithi H"} flagFormat={"Flag format: Kalpana2024{XYZ}"}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Apt 4'} points={'30'} attempts={"1"} solved={user.easy_questions[13]} index={'13'} questype={'easy'} author={"Musharraf"} flagFormat={"Refer to the file"}/>
+                    </div>
+                    <div className="easySec2">
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'brown'} title={'Apt 5'} points={'30'} attempts={"1"} solved={user.easy_questions[14]} index={'14'} questype={'easy'} author={"Musharraf"} flagFormat={"Refer to the file"}/>
                     </div>
                 </div>
             </div>
@@ -21,13 +23,11 @@ const SecondWave = ({user,totalPoints,setTotalPoints}) => {
                 <h1>Medium</h1>
                 <div>
                     <div className="mediumSec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.med_questions[5]} index={'5'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.med_questions[6]} index={'6'} questype={'medium'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Lil Secret'} points={'100'} attempts={"3"}  solved={user.med_questions[2]} index={'2'} questype={'medium'} author={"Adithi H"} flagFormat={"Flag format: Kalpana2024{XYZ}"}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Pokemon'} points={'100'} attempts={"3"}  solved={user.med_questions[3]} index={'3'} questype={'medium'} author={"K R Druva"} flagFormat={"Flag format:flag1"}/>
                     </div>
                     <div className="mediumSec2"> 
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.med_questions[7]} index={'7'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.med_questions[8]} index={'8'} questype={'medium'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.med_questions[9]} index={'9'} questype={'medium'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Dont Cheat'} points={'100'} attempts={"3"}  solved={user.med_questions[4]} index={'4'} questype={'medium'} author={"Jawahar Balachandher"} flagFormat={"Refer to the file"}/>
                     </div>
                 </div>
             </div>
@@ -35,13 +35,11 @@ const SecondWave = ({user,totalPoints,setTotalPoints}) => {
                 <h1>Hard</h1>
                 <div>
                     <div className="hardSec1">
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Bombs Landed'} points={'80'} attempts={"3"}  solved={user.hard_questions[5]} index={'5'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'Find The Easy Pass'} points={'80'} attempts={"3"}  solved={user.hard_questions[6]} index={'6'} questype={'hard'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'orange'} title={'Memes'} points={'200'} attempts={"3"}  solved={user.hard_questions[1]} index={'1'} questype={'hard'} author={"Jawahar Balachandher"} flagFormat={"Refer to the file"}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'green'} title={'MATRYOSHKA_DOLL'} points={'200'} attempts={"3"}  solved={user.hard_questions[4]} index={'4'} questype={'hard'} author={"K R Druva"} flagFormat={"Flag format:KEYWORD1_KEYWORD2"}/>
                     </div>
                     <div className="hardSec2"> 
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Find The Secret Flag'} points={'80'} attempts={"3"}  solved={user.hard_questions[7]} index={'7'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'grey'} title={'Impossible Password'} points={'80'} attempts={"3"}  solved={user.hard_questions[8]} index={'8'} questype={'hard'}/>
-                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'red'} title={'DSYM'} points={'80'} attempts={"3"}  solved={user.hard_questions[9]} index={'9'} questype={'hard'}/>
+                        <Question totalPoints={totalPoints} setTotalPoints={setTotalPoints} color={'darkslategray'} title={'Legend of Zelda'} points={'200'} attempts={"3"}  solved={user.hard_questions[3]} index={'3'} questype={'hard'} author={"Adithi H"} flagFormat={"Flag format: Kalpana2024{XYZ}"}/>
                     </div>
                 </div>
             </div>

@@ -22,8 +22,8 @@ const Home = () => {
             <div className="homeContainer">
                 <h1 className="homeHeading">Kalpana</h1>
                 <div className="homeDate">MARCH 15TH AND 16TH, 2024</div>
-                <div className="homeEvent">AN IEEE PESU EC CAMPUS, WIE CHAPTER EVENT</div>
-                <div className="homeEvent">MRD AUDITORIUM,EC CAMPUS</div>
+                <div className="homeEvent">AN IEEE PESU EC CAMPUS, WIE, SIGHT CHAPTER EVENT</div>
+                <div className="homeEvent">MRD AUDITORIUM, EC CAMPUS</div>
             </div>
             <div className="homeFooter">&copy; PESIT SOUTH STUDENT BRANCH</div>
         </div>
