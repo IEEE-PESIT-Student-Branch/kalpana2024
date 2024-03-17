@@ -1,0 +1,30 @@
+@startuml ""
+
+footer Designed & Developed by Jawahar Balachandher\nB.Tech CSE, 2025 Batch\nPES University, Electronics City Campus, Bangalore
+
+actor Alice
+actor Bob  
+
+Alice -> Bob: Hey, Are you enjoying kalpana 2024 ? 
+Bob -> Alice: Yes, its truely amazing.
+Alice -> Bob: Shall we exchange flags to boost up our rank in the leaderboard ?
+Bob -> Alice: Sure, lets do it. But keep our conversation secret from now.
+Alice -> Bob: First half of the flag is: Kalpana{7h3_n4m3_0f_
+Bob -> Alice: I look for the rest.
+Alice -> Bob: The middle part is very hard to find. 
+Bob -> Alice: So, lets do one thing then, I'll find the middle part. You try for the final part of the flag
+Alice -> Bob: Good plan, lets' get crackin'
+Bob -> Alice: OK !
+Alice -> Bob: I found the last part of the flag: _p14ntum1_ch3ck_1t_0ut}
+Bob -> Alice: Noice, I'm working on it.
+Alice -> Bob: Ok, I'll wait.
+Bob -> Alice: I found the middle part, it is: 7he_um1_15_
+Alice -> Bob: GG Bob
+Bob -> Alice: GG Alice
+
+Bob -> Alice: I'm the organizer of this event, found the fake flag? 
+Alice -> Bob: I hate you
+Bob -> Alice: No problem, you are disqualified.
+Alice -> Bob: NOooooooooooooooooooooooooooooooooooo
+
+@enduml
