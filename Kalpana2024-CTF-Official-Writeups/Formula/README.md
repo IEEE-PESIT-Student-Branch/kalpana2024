@@ -1,7 +1,7 @@
 ## Formula 
-
 #### Difficulty level: Easy
 #### Points: 50
+#### Author: Jawahar Balachandher
 
 ![Shoelace formula](Formula.png)
 

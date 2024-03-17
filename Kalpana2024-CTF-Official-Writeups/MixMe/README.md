@@ -1,6 +1,7 @@
 ## MixMe
 #### Difficulty level: Easy
 #### Points: 50
+#### Author: Jawahar Balachandher
 
 ![Wurtz-Fittig](MixMe.png)
 

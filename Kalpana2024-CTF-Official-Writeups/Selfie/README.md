@@ -1,6 +1,7 @@
 ## Selfie
 #### Difficulty level: Medium
 #### Points: 100
+#### Author: Jawahar Balachandher
 
 ![Selfie](selfie.jpg)
 
