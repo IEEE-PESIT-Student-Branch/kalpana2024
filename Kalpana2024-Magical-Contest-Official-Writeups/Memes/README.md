@@ -130,6 +130,7 @@ source_vertex destination_vertex
 Short description about the given sample input and output
 
 For the binary tree: 
+
                1
 
             /    \
