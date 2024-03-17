@@ -7,11 +7,11 @@
 
 **monsters.jpg** contains the problem statement
 
-**kgf.jpeg** contains
+**kgf.jpeg** contains the constraints
 
-**movie.jpeg** contains
+**movie.jpeg** contains the output format 
 
-**superhero.jpeg** contains
+**superhero.jpeg** contains the input format
 
 ### Solution
 Step-1: Apply exiftool on monsters.jpg
