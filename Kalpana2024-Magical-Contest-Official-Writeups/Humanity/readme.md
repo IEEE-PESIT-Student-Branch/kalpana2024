@@ -13,6 +13,6 @@ When you search for it, Steganographr works by converting your private message i
 
 https://neatnik.net/steganographr/#results
 
-![humanity](/z_images/humanity.png)
+![humanity](https://github.com/IEEE-PESIT-Student-Branch/kalpana2024/blob/de2cd02c700e106d60db47eae792630df82d3103/Kalpana2024-Magical-Contest-Official-Writeups/z_images/humanity.png)
 
 ` Flag - Kalpana2024{un1ty_1n_d1vers1ty} `
