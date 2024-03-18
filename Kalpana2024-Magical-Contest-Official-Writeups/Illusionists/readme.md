@@ -16,6 +16,6 @@ Step 3 - Change that to PNG format hex header
 and extension to `.png`
 
 You get a proper image
-![Ill](/z_images/ill.png)
+![Ill](https://github.com/IEEE-PESIT-Student-Branch/kalpana2024/blob/147afea8b01d22eca30605472d6a5e3a229615e3/Kalpana2024-Magical-Contest-Official-Writeups/z_images/ill.png)
 
 `Flag - Kalpana2024{PNGesus}`
