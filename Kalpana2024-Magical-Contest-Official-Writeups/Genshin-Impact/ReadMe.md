@@ -16,9 +16,9 @@ Now we extract the text file[LATIN_GIBBERISH_ERStwHile.txt] present in the Audio
 In LATIN_GIBBERISH_ERStwHile.txt ,copy the contents[EYEPOPAE] into this link[https://www.dcode.fr/latin-gibberish] we end up with [POPEYE],this is the pwd for the Genshin.pdf.
 
 
-
-
 In Genshin.pdf, we decypt the given pattern using this link[https://www.dcode.fr/sumeru-language-genshin-impact] where we end up with [RAITAPELPAKNEEENSES].
 Now in LATIN_GIBBERISH_ERStwHile.txt we have mentioned about jumbling with repect to two words [LUMINALNEXUS & ASTROGING].
+
+
 Which implies we have to perform Double Transposition on[RAITAPELPAKNEEENSES] wrt [LUMINALNEXUS & ASTROGING] in this link[https://www.dcode.fr/double-transposition-cipher],
 We end up with the final answer [IEEEPRESENTSKALPANA].
