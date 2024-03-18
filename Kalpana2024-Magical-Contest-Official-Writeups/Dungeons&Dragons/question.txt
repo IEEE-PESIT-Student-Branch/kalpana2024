@@ -1,0 +1,51 @@
+```
+You're managing a Dungeons and Dragons score tracker for a group of adventurers. Each player starts with an empty record.
+
+Given a list of die result, where each operation corresponds to a modification of an individual player's score record:
+
+An integer x: Represents the addition of a new score x to the record.
+'+': Represents the addition of a new score that is the sum of the previous two scores.
+'D': Represents the addition of a new score that is double the previous score, simulated by rolling a 20-sided die and multiplying the result by 2.
+'X': Represents the removal of the previous score from the record.
+Your task is to calculate the maximum sum of scores among all players after applying all the operations.
+
+Flag - Kalpana2024{winnerPlayerN_maximumScoreObtained}
+
+Example 1:
+
+Input: n=3
+Player1 -> ops = ["5","2","X","D","+"]
+
+"5" - Add 5 to the record, record is now [5].
+"2" - Add 2 to the record, record is now [5, 2].
+"X" - Invalidate and remove the previous score, record is now [5].
+"D" - Add 2 * 5 = 10 to the record, record is now [5, 10].
+"+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
+The total sum is 5 + 10 + 15 = 30.
+
+Player2 -> ops = ["5","-2","4,"X","D","9","+","+"]
+"5" - Add 5 to the record, record is now [5].
+"-2" - Add -2 to the record, record is now [5, -2].
+continue
+at last you get [5, -2, -4, 9, 5].
+The total sum is 5 + -2 + -4 + 9 + 5  = 13.
+
+Player3 -> ops = ["1","X"]
+
+"1" - Add 1 to the record, record is now [1].
+"X" - Remove the previous score, record is now [].
+Since the record is empty, the total sum is 0.
+
+sumArray = [30,27,0]
+Maximum in the sum array
+Output: 30  
+Flag: Kalpana2024{Player1_30}
+
+
+Constraints:
+1 <= operations.length <= 1000
+
+For operation "+", there will always be at least two previous scores on the record.
+For operations "X" and "D", there will always be at least one previous score on the record.
+
+```
