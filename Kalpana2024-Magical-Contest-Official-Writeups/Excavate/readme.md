@@ -1,9 +1,9 @@
-## Excavate
+# Excavate
 #### Author: Adithi H
 #### Difficulty level: Easy
 #### Points: 50
 
-# Files Attached 
+## Files Attached 
 * [enc_flag.txt](/Excavate/enc_flag.txt)
 
 
