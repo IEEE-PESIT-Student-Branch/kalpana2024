@@ -8,7 +8,7 @@
 
 >Simple steganography using https://stylesuxx.github.io/steganography/
 
-![fish](/z_images/fish.png)
+![fish](Kalpana2024-Magical-Contest-Official-Writeups/z_images/fish.png)
 
 There's a programming language cipher called "Dead fish" 
 https://www.dcode.fr/deadfish-language
