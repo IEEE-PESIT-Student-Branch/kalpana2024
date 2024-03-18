@@ -12,6 +12,6 @@
 **Tech members:**
 1. Abhijith M S
 2. Adithi H 
-3. Druva KR
+3. K R Druva
 4. Mohammed Musharraf 
 5. Nikita Anup 
