@@ -8,7 +8,7 @@
 
 >Simple steganography using https://stylesuxx.github.io/steganography/
 
-![fish](/z_images/fish.png)
+![fish](/Fish/fish.png)
 
 There's a programming language cipher called "Dead fish" 
 https://www.dcode.fr/deadfish-language
