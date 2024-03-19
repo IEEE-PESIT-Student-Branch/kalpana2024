@@ -1,9 +1,9 @@
-## EXPLORE
-#### Author : K R Druva
-#### Difficulty Level : EASY
-#### Points : 50 points
+# EXPLORE
+### Author : K R Druva
+### Difficulty Level : EASY
+### Points : 50 points
 
-# SOLUTION:-Kalpana{7h1s_15_J@w@h@r_b414ch4ndh3r}
+## SOLUTION:-Kalpana{7h1s_15_J@w@h@r_b414ch4ndh3r}
 
 The core member mentioned in the above question is Jawahar Balachander.
 His Username is [Jawahar.B] as required in the above question,the participants can find out the full name of the IEEE head or Jawahar Balachander,in the kalpana registration forms or any of the banners present in the Auditorium.
