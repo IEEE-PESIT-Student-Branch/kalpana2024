@@ -4,7 +4,7 @@
 ### Points : 200 points
 
 
-##SOLUTION:-COOKIE_JAR
+## SOLUTION:-COOKIE_JAR
 -------------------------------------------------------------------------------------------
 If you Open monday.txt we find EIRYK,acc to the hint provided,if u reverse it we end up KYRIE which is the password for sports.txt which is present in Monday.zip.
 
