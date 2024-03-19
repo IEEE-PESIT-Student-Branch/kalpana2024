@@ -1,10 +1,10 @@
-## MATRYOSHKA_DOLL
-#### Author:K R DRUVA
-#### Difficulty Level: HARD
-#### Points : 200 points
+# MATRYOSHKA_DOLL
+### Author:K R DRUVA
+### Difficulty Level: HARD
+### Points : 200 points
 
 
-SOLUTION:-COOKIE_JAR
+##SOLUTION:-COOKIE_JAR
 -------------------------------------------------------------------------------------------
 If you Open monday.txt we find EIRYK,acc to the hint provided,if u reverse it we end up KYRIE which is the password for sports.txt which is present in Monday.zip.
 
@@ -23,7 +23,7 @@ In ook.txt ,the name of the cipher used  is the name of the file,on put the cont
 
 In ALTernativeCODEs_which_are_usefull_in_future.txt ,the name of the cipher[Alt-Codes] used for decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
 
-if u place the contents in this link[https://www.dcode.fr/alt-codes-converter],we end up with KEVIN as the ANSWER for the ATLANTEAN.pdf.
+if u place the contents in this link [https://www.dcode.fr/alt-codes-converter] ,we end up with KEVIN as the ANSWER for the ATLANTEAN.pdf.
 
 
 In  ATLANTEAN.pdf,the name of the cipher[Atlantean-language] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
@@ -32,11 +32,11 @@ if u place the contents in this link[https://www.dcode.fr/atlantean-language],we
 
 In  ENOsisCHIllANcient.pdf,the name of the cipher[enochian-language] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
 
-if u place the contents in this link[https://www.dcode.fr/enochian-language],we end up with IITDELHI as the ANSWER for the DOVeAHaZULu.pdf .
+if u place the contents in this link [https://www.dcode.fr/enochian-language],we end up with IITDELHI as the ANSWER for the DOVeAHaZULu.pdf .
 
 
 In  DOVeAHaZULu.pdf,the name of the cipher[DOVAHZUL] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
-if u place the contents in this link[https://www.dcode.fr/dovahzul-dragon-language],
+if u place the contents in this link [https://www.dcode.fr/dovahzul-dragon-language],
 
 
 we end up with COOKIE_JAR as the SOLUTION FOR THIS PARTICULAR QUESTION.
