@@ -7,7 +7,7 @@ SOLUTION:-kalpana{batman_comes_home}
 
 In the batman.txt,we find   out the password for RATAtoullieALAbamaDAd1.pdf which is the main villian of  Batman Returns[THE_PENGUIN].
 
-Now in RATAtoullieALAbamaDAd1.pdf we use one cipher for encyption and decrpytion[RATAALADA],on decrpytion using this link[https://www.dcode.fr/rata-alada-cipher],we end up with [CARMINE_FALCONE] as the password for extracting the files present in the image.
+Now in RATAtoullieALAbamaDAd1.pdf we use one cipher for encyption and decrpytion[RATAALADA],on decrpytion using this link[https://www.dcode.fr/rata-alada-cipher] ,we end up with [CARMINE_FALCONE] as the password for extracting the files present in the image.
 we could now use Steghide to extract all the files present in the image.
 
 
