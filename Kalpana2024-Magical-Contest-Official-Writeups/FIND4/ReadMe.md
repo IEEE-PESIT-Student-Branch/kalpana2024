@@ -1,9 +1,9 @@
-## FIND 4
-#### Author : K R Druva
-#### Difficulty Level : MEDIUM
-#### Points : 100 points
+# FIND 4
+### Author : K R Druva
+### Difficulty Level : MEDIUM
+### Points : 100 points
 
-SOLUTION:-kalpana_starts_from_2203
+## SOLUTION:-kalpana_starts_from_2203
 Github link contains two flags hidden.
 
 First Flag[kalpana]:-when we open the github profile and check for issues of KALPANAAA
