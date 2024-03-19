@@ -1,10 +1,10 @@
-## STAR-TREK
-#### Author : K R Druva
-#### Difficulty Level : HARD
-#### Points : 200 points
+# STAR-TREK
+### Author : K R Druva
+### Difficulty Level : HARD
+### Points : 200 points
 
 
-SOLUTION :- IEEE(HEAD)=BIGGUY
+## SOLUTION :- IEEE(HEAD)=BIGGUY
 
 The Following Two hints were embedded in the KENnel_New_York.txt.
 HINT 1:
