@@ -1,9 +1,9 @@
-## POKEMON
-#### Author : K R Druva
-#### Difficulty Level : MEDIUM
-#### Points : 100 points
+# POKEMON
+### Author : K R Druva
+### Difficulty Level : MEDIUM
+### Points : 100 points
 
-SOLUTION:-HEALTH HACKING IS GONNA START IN FIVE MINUTES
+## SOLUTION:-HEALTH HACKING IS GONNA START IN FIVE MINUTES
 
 When we open 13ROTwielers.txt we find a
  Hint No. 1[Pwd for extracting the file--{GRNZEBPXRG}],and we get to know the name of the cipher[13ROT] used is the name of the text file.
