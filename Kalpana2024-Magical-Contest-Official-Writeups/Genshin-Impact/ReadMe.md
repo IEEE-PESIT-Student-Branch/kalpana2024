@@ -1,10 +1,10 @@
-## SOURCE   
-#### AUTHOR : K R DRUVA
+# GENSHIN-IMPACT   
 
-#### Difficulty Level : HARD
-#### Points : 200 points
+### AUTHOR : K R DRUVA
+### Difficulty Level : HARD
+### Points : 200 points
 
-Solution : IEEEPRESENTSKALPANA
+## Solution : IEEEPRESENTSKALPANA
 
 
 In textualfile.txt hint to be extracted is that the participant must figure out that they have to deal with the Audio file and then proceed with remaining as we have specified about the story of ALibaba and Fourty Thieves.
