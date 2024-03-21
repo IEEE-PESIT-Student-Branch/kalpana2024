@@ -28,11 +28,11 @@ if u place the contents in this link [https://www.dcode.fr/alt-codes-converter] 
 
 In  ATLANTEAN.pdf,the name of the cipher[Atlantean-language] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
 
-if u place the contents in this link[https://www.dcode.fr/atlantean-language],we end up with JOKER as the ANSWER for the ENOsisCHIllANcient.pdf .
+if u place the contents in this link[https://www.dcode.fr/atlantean-language] ,we end up with JOKER as the ANSWER for the ENOsisCHIllANcient.pdf .
 
 In  ENOsisCHIllANcient.pdf,the name of the cipher[enochian-language] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
 
-if u place the contents in this link [https://www.dcode.fr/enochian-language],we end up with IITDELHI as the ANSWER for the DOVeAHaZULu.pdf .
+if u place the contents in this link [https://www.dcode.fr/enochian-language] ,we end up with IITDELHI as the ANSWER for the DOVeAHaZULu.pdf .
 
 
 In  DOVeAHaZULu.pdf,the name of the cipher[DOVAHZUL] used for encrpyting and decrpyting the contents inside the this text file  is clearly mentioned in all capital letters of the name of the text file.
