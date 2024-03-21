@@ -3,4 +3,4 @@ One of our esteemed core team members has achieved an outstanding feat by securi
 Their remarkable expertise and dedication have propelled them to this prestigious rank, showcasing their exceptional skills in cybersecurity.
 As we delve deeper into the profile, we embark on a journey to uncover the nuances of the achievements, striving to unravel the mystery and unlock the coveted flag that symbolizes the triumph.
 Hint: username -> firstname.X
-	=> first letter of firstname is capital and X is a capital letter	
+	=> first letter of firstname is capital and X is a capital letter.
