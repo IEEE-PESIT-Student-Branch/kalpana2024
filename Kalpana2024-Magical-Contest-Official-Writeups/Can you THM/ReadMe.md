@@ -7,7 +7,7 @@
 
 The core member mentioned in the above question is Jawahar Balachandher.
 
-His Username is [Jawahar.B] as required in the above question,the participants can find out the full name of the IEEE head or Jawahar Balachandher.
+His Username is [Jawahar.B] as required in the above question,the participants can find out the full name of the IEEE head or Jawahar Balachandher
 ,in the kalpana registration forms or any of the banners present in the Auditorium.
 
 
