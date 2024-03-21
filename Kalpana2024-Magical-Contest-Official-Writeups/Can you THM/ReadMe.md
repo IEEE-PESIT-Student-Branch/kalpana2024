@@ -5,9 +5,9 @@
 
 ## SOLUTION:-Kalpana{7h1s_15_J@w@h@r_b414ch4ndh3r}
 
-The core member mentioned in the above question is Jawahar Balachander.
+The core member mentioned in the above question is Jawahar Balachandher.
 
-His Username is [Jawahar.B] as required in the above question,the participants can find out the full name of the IEEE head or Jawahar Balachander.
+His Username is [Jawahar.B] as required in the above question,the participants can find out the full name of the IEEE head or Jawahar Balachandher.
 ,in the kalpana registration forms or any of the banners present in the Auditorium.
 
 
@@ -20,5 +20,5 @@ Once the participants are done with that ,the participants were required to exam
 
 
 The participants are required to fill [Jawahar.B] in the place of ProfileName,the profile of the required Core Team member is shown up on the browser now.
-The flag is now clearly shown in the descrption of the profile of Jawahar Balachander.
+The flag is now clearly shown in the descrption of the profile of Jawahar Balachandher.
 .
