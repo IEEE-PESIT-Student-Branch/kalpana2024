@@ -1,4 +1,4 @@
-# EXPLORE
+# CAN YOU THM.?
 ### Author : K R Druva
 ### Difficulty Level : EASY
 ### Points : 50 points
