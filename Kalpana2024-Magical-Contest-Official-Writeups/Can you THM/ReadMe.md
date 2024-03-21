@@ -20,5 +20,5 @@ Once the participants are done with that ,the participants were required to exam
 
 
 The participants are required to fill [Jawahar.B] in the place of ProfileName,the profile of the required Core Team member is shown up on the browser now.
-The flag is now clearly shown in the descrption of the profile of Jawahar Balachandher.
+The flag is now clearly shown in the descrption of the profile of Jawahar Balachandher
 .
